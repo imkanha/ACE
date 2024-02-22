@@ -1,0 +1,881 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>ACE | Home</title>
+<!-- Stylesheets -->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+<link href="{% static 'plugins/revolution/css/settings.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION SETTINGS STYLES -->
+<link href="{% static 'plugins/revolution/css/layers.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION LAYERS STYLES -->
+<link href="{% static 'plugins/revolution/css/navigation.css' %}" rel="stylesheet" type="text/css"><!-- REVOLUTION NAVIGATION STYLES -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet">
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+<!--Color Switcher Mockup-->
+<link href="{% static 'css/color-switcher-design.css' %}" rel="stylesheet">
+
+<!--Color Themes-->
+<link id="theme-color-file" href="{% static 'css/color-themes/default-theme.css' %}" rel="stylesheet">
+
+<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+ 	
+    <!-- Preloader -->
+    <div class="preloader"></div>
+ 	
+    <!-- Main Header-->
+    <header class="main-header">
+        
+        <!-- Main Box -->
+    	<div class="main-box">
+        	<div class="auto-container">
+            	<div class="outer-container clearfix">
+                    <!--Logo Box-->
+                    <div class="logo-box">
+                        <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'images/ace-logo2.png' %}" alt=""></a></div>
+                    </div>
+                    
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
+                    
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->    	
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li class="current"><a href="{% url 'index' %}">Home</a></li>
+                                    <li class="dropdown"><a href="#">Business Solutions</a>
+                                    	<ul>
+                                            <li class="dropdown"><a href="#">E-Mobility</a>
+                                                <ul>
+                                                    <li><a href="{% url 'electricbike' %}">Electric Bikes</a></li>
+                                                    <li><a href="{% url 'electricboat' %}">Electric Boats</a></li>
+                                                    <li><a href="{% url 'drone' %}">Drones</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Information technology</a>
+                                                <ul>
+                                                    <li><a href="{% url 'cybersecurity' %}">Cyber Security</a></li>
+                                                    <li><a href="{% url 'supplychain' %}">Supply Chain Management</a></li>
+                                                    <li><a href="{% url 'exammanagement' %}">Exam Management</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'assessment' %}">Assessment</a></li>
+                                            <li><a href="{% url 'globaleducation' %}">Global Education</a></li>
+                                            <li><a href="{% url 'realestate' %}">Real Estate & Infrastructure Management</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Company</a>
+                                    	<ul>
+                                            <li><a href="{% url 'company-history' %}">Overview</a></li>
+                                            <li><a href="{% url 'groupcompany' %}">Group Companies</a></li>
+                                            <li><a href="{% url 'client' %}">Clientale</a></li>
+                                            <li><a href="{% url 'socialinitiatives' %}">Social Initiatives</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Investors</a>
+                                    	<ul>
+                                            <li><a href="Disclosures-under-Regulation.html">Disclosures under Regulation 46 of the LODR</a></li>
+                                            <li class="dropdown"><a href="#">Financials & Fillings</a>
+                                                <ul>
+                                                    <li><a href="{% url 'financial-result' %}">Financial Results</a></li>
+                                                    <li><a href="{% url 'financial-statement' %}">Financial Statements</a></li>
+                                                    <li><a href="{% url 'annual-report' %}">Annual Reports</a></li>
+                                                    <li><a href="{% url 'otherpublication' %}">Other Publications</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Board Information</a>
+                                                <ul>
+                                                    <li><a href="{% url 'boardofdirector' %}">Board of Directors</a></li>
+                                                    <li><a href="{% url 'Composition-of-various-Committees-of-BOD' %}">Composition of various Committees of BOD</a></li>
+                                                    <li><a href="{% url 'board-meeting' %}">Board Meeting </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Compliances</a>
+                                                <ul>
+                                                    <li><a href="{% url 'shareholding-pattern' %}">Shareholding Pattern</a></li>
+                                                    <li><a href="{% url 'corporate-governance' %}">Corporate Governance Report</a></li>
+                                                    <li><a href="{% url 'stock-exchange' %}">Stock Exchange Intimation</a></li>
+                                                    <li><a href="{% url 'agmegm' %}">AGM/EGM</a></li>
+                                                    <li><a href="{% url 'postal-ballot' %}">Postal Ballot</a></li>
+                                                    <li><a href="{% url 'annual-return' %}">Annual Return</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="policies.html">Policies & Codes</a></li>
+                                            <li><a href="Investor-Grievances-Cell.html">Investor Grievance Cell</a></li>
+                                            <li><a href="ipo.html">IPO</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+                                 </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                    </div>
+                    <!--Nav Outer End-->
+                    
+            	</div>    
+            </div>
+        </div>
+    
+    	<!--Sticky Header-->
+        <div class="sticky-header">
+        	<div class="auto-container">
+                <div class="sticky-inner-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="index.html" class="img-responsive"><img src="{% static 'images/ace-logo2.png' %}" height="880px" width="150px" alt="" title=""></a>
+                    </div>
+                    
+                    <!--Right Col-->
+                    <div class="right-col pull-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->    	
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li class="current"><a href="index.html">Home</a></li>
+                                    <li class="dropdown"><a href="#">Business Solutions</a>
+                                    	<ul>
+                                            <li class="dropdown"><a href="#">E-Mobility</a>
+                                                <ul>
+                                                    <li><a href="electricbike.html">Electric Bikes</a></li>
+                                                    <li><a href="electricboat.html">Electric Boats</a></li>
+                                                    <li><a href="drone.html">Drones</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Information technology</a>
+                                                <ul>
+                                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
+                                                    <li><a href="supplychain.html">Supply Chain Management</a></li>
+                                                    <li><a href="exammanagement.html">Exam Management</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="assessment.html">Assessment</a></li>
+                                            <li><a href="globaleducation.html">Global Education</a></li>
+                                            <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Company</a>
+                                    	<ul>
+                                            <li><a href="company-history.html">Overview</a></li>
+                                            <li><a href="groupcompany.html">Group Companies</a></li>
+                                            <li><a href="client.html">Clientale</a></li>
+                                            <li><a href="socialinitiatives.html">Social Initiatives</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown"><a href="#">Investors</a>
+                                    	<ul>
+                                            <li><a href="Disclosures-under-Regulation.html">Disclosures under Regulation 46 of the LODR</a></li>
+                                            <li class="dropdown"><a href="#">Financials & Fillings</a>
+                                                <ul>
+                                                    <li><a href="financial-result.html">Financial Results</a></li>
+                                                    <li><a href="financial-statement.html">Financial Statements</a></li>
+                                                    <li><a href="annual-report.html">Annual Reports</a></li>
+                                                    <li><a href="otherpublication.html">Other Publications</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Board Information</a>
+                                                <ul>
+                                                    <li><a href="boardofdirector.html">Board of Directors</a></li>
+                                                    <li><a href="Composition-of-various-Committees-of-BOD.html">Composition of various Committees of BOD</a></li>
+                                                    <li><a href="board-meeting.html">Board Meeting </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Compliances</a>
+                                                <ul>
+                                                    <li><a href="{% url 'shareholding-pattern' %}">Shareholding Pattern</a></li>
+                                                    <li><a href="{% url 'corporate-governance' %}">Corporate Governance Report</a></li>
+                                                    <li><a href="{% url 'stock-exchange' %}">Stock Exchange Intimation</a></li>
+                                                    <li><a href="{% url 'agmegm' %}">AGM/EGM</a></li>
+                                                    <li><a href="{% url 'postal-ballot' %}">Postal Ballot</a></li>
+                                                    <li><a href="{% url 'annual-return' %}">Annual Return</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'policies' %}">Policies & Codes</a></li>
+                                            <li><a href="{% url 'Investor-Grievances-Cell' %}">Investor Grievance Cell</a></li>
+                                            <li><a href="{% url 'ipo' %}">IPO</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contact' %}">Contact us</a></li>
+                                 </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    
+    </header>
+    <!--End Main Header -->
+    
+    <!--Main Slider-->
+    <section class="main-slider">
+    	
+        <div class="rev_slider_wrapper fullwidthbanner-container"  id="rev_slider_one_wrapper" data-source="gallery">
+            <div class="rev_slider fullwidthabanner" id="rev_slider_one" data-version="5.4.1">
+                <ul>
+                	
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1688" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-1.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static 'images/main-slider/SW_AdobeStock_298000277_Preview.jpeg' %}"> 
+                    
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['650','700','700','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['-50','-90','-90','-120']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<h2>We Provide Innovated <br> IT Solutions</h2>
+                    </div>
+                    
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['700','700','700','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['70','40','20','0']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="text">We deliver sustainable solutions and services to various industries within the USA. Our partners and clients value us for the quality of our products.</div>
+                    </div>
+                    </li>
+                    
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1689" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-2.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static 'images/main-slider/EV_AdobeStock_437936229_Preview.jpeg' %}"> 
+                    
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['650','700','700','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['-50','-90','-90','-120']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<h2>Modern technology <br> for your industry</h2>
+                    </div>
+                    
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['700','700','700','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['70','40','20','0']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="text">We deliver sustainable solutions and services to various industries within the USA. Our partners and clients value us for the quality of our products.</div>
+                    </div>
+                    
+                    </li>
+                    
+                    <li data-description="Slide Description" data-easein="default" data-easeout="default" data-fsmasterspeed="1500" data-fsslotamount="7" data-fstransition="fade" data-hideafterloop="0" data-hideslideonmobile="off" data-index="rs-1690" data-masterspeed="default" data-param1="" data-param10="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-rotate="0" data-saveperformance="off" data-slotamount="default" data-thumb="images/main-slider/image-3.jpg" data-title="Slide Title" data-transition="parallaxvertical">
+                    <img alt="" class="rev-slidebg" data-bgfit="cover" data-bgparallax="10" data-bgposition="center center" data-bgrepeat="no-repeat" data-no-retina="" src="{% static 'images/main-slider/CyberSecurityAdobeStock_269740489_Preview.jpeg' %}"> 
+                    
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['650','700','700','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['-50','-90','-90','-120']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<h2>We Provide IT, Education & EV Solutions</h2>
+                    </div>
+                    
+                    <div class="tp-caption" 
+                    data-paddingbottom="[0,0,0,0]"
+                    data-paddingleft="[0,0,0,0]"
+                    data-paddingright="[0,0,0,0]"
+                    data-paddingtop="[0,0,0,0]"
+                    data-responsive_offset="on"
+                    data-type="text"
+                    data-height="none"
+                    data-width="['700','700','700','550']"
+                    data-whitespace="normal"
+                    data-hoffset="['15','15','15','15']"
+                    data-voffset="['70','40','20','0']"
+                    data-x="['left','left','left','left']"
+                    data-y="['middle','middle','middle','middle']"
+                    data-textalign="['top','top','top','top']"
+                    data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;s:inherit;e:inherit;","ease":"Power3.easeInOut"}]'>
+                    	<div class="text">We deliver sustainable solutions and services to various industries within the USA. Our partners and clients value us for the quality of our products.</div>
+                    </div>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--End Main Slider-->
+    
+    <!--Call To Action-->
+    <section class="call-to-action">
+    	<div class="auto-container clearfix">
+        	<h2>A high Quality Control in compliance with international standards</h2>
+        </div>
+    </section>
+    <!--End Call To Action-->
+    
+    <div id="about_page">
+    <!--About Section-->
+    <section class="about-section">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            	
+                <!--Content Column-->
+                <div class="content-column col-md-6 col-sm-12 col-xs-12">
+                	<div class="inner-column">
+                    	<h2><b>About Us</b></h2>
+                        <div class="text">Ace is well established IT company operating since 25 years of inception and has consciously decided to diversify in the emerging tech based business in e mobility and plans to set-up infrastructure for electric vehicles.</div>
+                        <div class="text">The magnificence of AISL has stood over 25 years. Working on international testing models, the Organization conducts a wide spectrum of activities in personnel selection both for promotion within and recruitment and selection from outside the organization.<br><br> Today, AISL has become a body providing integrated end to end solutions for human resource management of client organizations.</div>
+                    </div>
+                </div>
+                
+                <!--Image Column-->
+                <div class="image-column col-md-6 col-sm-12 col-xs-12">
+                	<div class="row clearfix">
+                    	<!--Column-->
+                    	
+                        	<div class="image">
+	                        	<img src="{% static 'images/resource/79-about-ace.png' %}" alt="" />
+                            </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    </div>
+    <!--End About Section-->
+    
+    <!--We Do Section-->
+    <section class="we-do-section grey-bg">
+    	<div class="auto-container">
+        	<!--Sec Title-->
+            <div class="sec-title">
+            	<h2>INFORMATION TECHNOLOGY</h2>
+                <!--<div class="text">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content.</div>-->
+            </div>
+            
+            <div class="row clearfix">
+            	
+                <!--Services Block-->
+                <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="image">
+                        	<a href="exammanagement.html"><img src="{% static 'images/img/software.jpeg' %}" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                        	<h3><a href="exammanagement.html">Software Development</a></h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Services Block-->
+                <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="image">
+                        	<a href="cybersecurity.html"><img src="{% static 'images/img/Cybersecurity.jpeg' %}" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                        	<h3><a href="cybersecurity.html">Cyber security</a></h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--Services Block-->
+                <div class="services-block col-md-4 col-sm-6 col-xs-12">
+                	<div class="inner-box">
+                    	<div class="image">
+                        	<a href="supplychain.html"><img src="{% static 'images/img/SCM.jpeg' %}" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                        	<h3><a href="supplychain.html">Supply Chain Management</a></h3>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!--End We Do Section-->
+    
+    <!--Project FullWidth Screen-->
+    <div class="blog-page-section">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            	<div class="sec-title">
+                    <h2>Education and Assessment</h2>
+                </div>
+                <!--News Block Three-->
+                <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="coachingforemployment.html"><img src="{% static 'images/img/coaching.png' %}" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <div class="lower-box">
+                                <h3><a href="coachingforemployment.html">Coaching for Employment</a></h3>
+                                <div class="text">.........</div>
+                                <a href="coachingforemployment.html" class="theme-btn btn-style-four">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--News Block Three-->
+                <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="assessment.html"><img src="{% static 'images/img/Assessment1.jpeg' %}" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <div class="lower-box">
+                                <h3><a href="assessment.html">Assessment </a></h3>
+                                <div class="text">Ace Edupoint aims and focuses to bring revolutionary transformational catalyst, to guide students and career aspirants.....</div>
+                                <a href="assessment.html" class="theme-btn btn-style-four">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Project FullWidth Screen-->
+    
+    <!--We Do Section-->
+    <section class="we-do-section grey-bg">
+    	<div class="auto-container">
+        	<!--Sec Title-->
+            <div class="row clearfix">
+            	<div class="sec-title">
+                    <h2>E-MOBILITY</h2>
+                </div>
+                <!--News Block Three-->
+                <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="ev.html"><img src="{% static 'images/img/EV.jpeg' %}" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <div class="lower-box">
+                                <h3><a href="ev.html">Electric Vehicle</a></h3>
+                                <div class="text">Before the COVID-19 pandemic shook up the automotive industry – along 
+                                    with every other industry – electric vehicles were.......</div>
+                                <a href="ev.html" class="theme-btn btn-style-four">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!--News Block Three-->
+                <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="drone.html"><img src="{% static 'images/img/drone.png' %}" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <div class="lower-box">
+                                <h3><a href="drone.html">DRONE</a></h3>
+                                <div class="text">.......
+                                    </div>
+                                <a href="drone.html" class="theme-btn btn-style-four">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!--End We Do Section-->
+
+    <!--Approach Section-->
+    <section class="aproach-section">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+            	
+                <!--Title Column-->
+                <div class="title-column col-md-4 col-sm-12 col-xs-12">
+                	<div class="inner-column">
+                    	<h2>Our Approach</h2>
+                    </div>
+                </div>
+                
+                <!--Content Column-->
+                <div class="content-column col-md-8 col-sm-12 col-xs-12">
+                	<div class="inner-column">
+                        <div class="big-text">A hight level Quality Control in compliance with National and In International regulations and standards.</div>
+                        <p>Ace is well established IT company operating since 25 years of inception and has consciously decided to diversify in the emerging tech based business in e mobility and plans to set-up infrastructure for electric vehicles.</p>
+                        <p>EV business stands both short and long term gainer in India and substituting fossil fuel based transportation with green energy of electric system based e bikes and e scooter.</p>
+                        <p>Considering massive market pull there would be immense demand from segments and ACE can attain sizeable business share in such high growth business and benefit its business stakeholders.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!--End Approach Section-->
+
+    <section class="news-section">
+    	<div class="auto-container">
+        
+        	<div class="sec-title">
+            	<h2>Why Choose Us?</h2>
+                <div class="title">News & Press Release</div>
+            </div>
+            
+            <div class="row clearfix">
+            
+            	<!--Column-->
+            	<div class="column col-md-6 col-sm-12 col-xs-12">
+                    <!--Accordian Box-->
+                    <ul class="accordion-box faq">
+                        
+                        <!--Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div> Vertical and Domain Expertise</div>
+                            <div class="acc-content">
+                                <div class="content">
+                                    <div class="text">Having worked on numerous projects, we have gained unmatched business and technological expertise. Our rich business domain expertise enables us to communicate with customers and understand their business needs easily. We have built a large pool of knowledge that we apply to deliver solutions that meet client's needs, expectation and budget.<br><br>Our knowledge stretches from application design, development and integration to operating key processes. This knowledge base and expertise help us save client's precious time and deliver the right solution for every specific situation.</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--Block-->
+                        <li class="accordion block">
+                            <div class="acc-btn active"><div class="icon-outer"><span class="icon icon-plus fa fa-plus"></span> <span class="icon icon-minus fa fa-minus"></span></div>We Are Dedicated to Our Clients Success</div>
+                            <div class="acc-content current">
+                                <div class="content">
+                                    <div class="text">We view ourselves as a vital part of each of our clientâ€™s teams and know our success hinges on them being successful. We have worked with many of our clients for years and attribute our high client retention rate to our responsiveness to their marketing needs and consistent dedication to their ongoing success.</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                </div>
+            
+                
+                <!--Column-->
+            	<div class="column col-md-4 col-sm-12 col-xs-12">
+                    
+                	<div class="sidebar-news">
+						
+                        <!--News Block Two-->
+                        <div class="news-block-two">
+                        	<div class="inner-box">
+                            	<h3><a href="CMMI-Certification-Underway.html">CMMI Certification Underway</a></h3>
+                                <h5>AISL is going for CMMI Certification. With CMMI organizations work with Dire...</h5>
+                                <div class="post-info">12 November 2017</div>
+                            </div>
+                        </div>
+                        
+                        <!--News Block Two-->
+                        <div class="news-block-two">
+                        	<div class="inner-box">
+                            	<h3><a href="Magnificence-of-AISL-has-stood-over-20-years.html">Magnificence of AISL has stood over 20 years</a></h3>
+                                <h5>AISL had commenced its operations in 1997. AISL took up the challenge to pro...</h5>
+                                <div class="post-info">20 November 2017</div>
+                            </div>
+                        </div>
+                        
+                        <!--News Block Two-->
+                        <div class="news-block-two">
+                        	<div class="inner-box">
+                            	<h3><a href="Listed-with-NSE.html">Listed with NSE (National Stock Exchange Limited)</a></h3>
+                                <h5>AISL has successfully completed the Listing requirement of National Stock Ex...</h5>
+                                <div class="post-info">13 July 2017</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    <!--Clients Section-->
+    <section class="clients-section">
+        <div class="auto-container">
+            
+            <div class="sponsors-outer">
+                <!--Sponsors Carousel-->
+                <ul class="sponsors-carousel owl-carousel owl-theme">
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/11-Factory-Ambajhari.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/13-indian-oil.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/15-Ordnance-Factory-Board-Kolkata.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/16-Heavy-Engineering-Corporation.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/17-Damodar-Valley-Corporation.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/17-nhpc-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/25-IGNOU.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/25-ntpc-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/29-food-corporation-india.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/29-THDC-Limited.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/34-dmrc-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/37-cpcl-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/44-gail-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/44-Hindustan-Aeronautics-Limited.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/45-G-B-Pant-University.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/45-nbcc-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/48-col-india.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/48-NHDC-Limited.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/53-bharat-cooking-coal.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/61-Mazgaon-Dock-Limited.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/68-bcpl-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/73-ordance-factory.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/75-ongc-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/77-powergrid-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/85-Punjab-University.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/87-central-warehousing.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/89-ohpc.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/90-Mangalore-Refinery-Petrochemicals.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/91-concor-logo.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/95-Delhi-University.png' %}" alt=""></a></figure></li>
+                    <li class="slide-item"><figure class="image-box"><a href="./client.html"><img src="{% static 'images/clients/99-RITES-Limited.png' %}" alt=""></a></figure></li>
+                </ul>
+            </div>
+            
+        </div>
+    </section>
+    <!--End Clients Section-->
+    
+    <!--Main Footer-->
+    <footer class="main-footer">
+		<div class="auto-container">
+        	<!--Widgets Section-->
+            <div class="widgets-section">
+            	<div class="row clearfix">
+                	
+                    <!--big column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                                <div class="footer-widget logo-widget">
+									<div class="logo">
+                                    	<a href="index.html"><img src="{% static 'images/ace-logo2.png' %}" height="850px" width="200px" alt="" /></a>
+                                    </div>
+                                    <div class="text">Collaboratively administrate em powered markets via plug and play networks. Dynamically procrastinate B2C users after installed.</div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                	<h2>Quick Links</h2>
+                                    <div class="widget-content">
+										<ul class="list">
+                                        	<li><a href="index.html">Home</a></li>
+                                            <li><a href="#about_page">About Us</a></li>
+                                            <li><a href="#testimonial_section">Testimonials</a></li>
+                                            <li><a href="#">Request Call Back</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--big column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                	<h2>Services</h2>
+                                    <div class="widget-content">
+										<ul class="list">
+                                        	<li><a href="#">Mechanical Engineering</a></li>
+                                            <li><a href="#">Agricultural Processing</a></li>
+                                            <li><a href="#">Petrolium & Gas</a></li>
+                                            <li><a href="#">Material Engineering</a></li>
+                                            <li><a href="#">Power & Engergy</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget info-widget">
+                                	<h2>Get In Touch</h2>
+                                    <div class="widget-content">
+                                    	<div class="number">+91 - 9650 339 995</div>
+                                        <div class="text">B-13, DSIDC Complex,
+                                            Patparganj Industrial Area, Delhi - 110 092</div>
+                                        <ul class="social-icon-one">
+                                        	<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <div class="copyright">&copy; Copyright  <a href="#">Ace Integrated Solutions Ltd..</a> 2023. All right reserved.</div>
+                    </div>
+                    <div class="pull-right">
+                        <div class="created">Created by Kristellar Aerospace Pvt. Ltd.</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </footer>
+    
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+
+<!-- Color Palate / Color Switcher -->
+<div class="color-palate">
+    <div class="color-trigger">
+        <i class="fa fa-gear"></i>
+    </div>
+    <div class="color-palate-head">
+        <h6>Choose Your Color</h6>
+    </div>
+    <div class="various-color clearfix">
+        <div class="colors-list">
+            <span class="palate default-color active" data-theme-file="{% static 'css/color-themes/default-theme.css' %}"></span>
+            <span class="palate teal-color" data-theme-file="{% static 'css/color-themes/teal-theme.css' %}"></span>
+            <span class="palate green-color" data-theme-file="{% static 'css/color-themes/green-theme.css' %}"></span>
+            <span class="palate aqua-color" data-theme-file="{% static 'css/color-themes/aqua-theme.css' %}"></span>
+            <span class="palate blue-color" data-theme-file="{% static 'css/color-themes/blue-theme.css' %}"></span>
+            <span class="palate orange-color" data-theme-file="{% static 'css/color-themes/orange-theme.css' %}"></span>
+            <span class="palate olive-color" data-theme-file="{% static 'css/color-themes/olive-theme.css' %}"></span>
+            <span class="palate red-color" data-theme-file="{% static 'css/color-themes/red-theme.css' %}"></span>
+        </div>
+    </div>
+
+    <div class="palate-foo">
+        <span>You can easily change and switch the colors.</span>
+    </div>
+
+</div>
+<!-- /.End Of Color Palate -->
+
+<script src="{% static 'js/jquery.js' %}"></script> 
+<!--Revolution Slider-->
+<script src="{% static 'plugins/revolution/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/jquery.themepunch.tools.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.carousel.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.kenburn.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.migration.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.parallax.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+<script src="{% static 'plugins/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+<script src="{% static 'js/main-slider-script.js' %}"></script>
+
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+
+<script src="{% static 'js/owl.js' %}"></script>
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+<!--Color Switcher-->
+<script src="{% static 'js/color-settings.js' %}"></script>
+</body>
+
+</html>

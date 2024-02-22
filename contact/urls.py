@@ -1,0 +1,40 @@
+from django.contrib import admin
+from django.urls import path
+from contact import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('contact/', views.contact_form, name='contact'),
+    path('electricbike/', views.electricbike,name='electricbike'),
+    path('electricboat/', views.electricboat, name='electricboat'),
+    path('drone/', views.drone, name='drone'),
+    path('cybersecurity/', views.cybersecurity, name='cybersecurity'),
+    path('supplychain/', views.supplychain, name='supplychain'),
+    path('exammanagement/', views.exammanagement, name='exammanagement'),
+    path('assessment/', views.assessment, name='assessment'),
+    path('globaleducation/', views.globaleducation, name='globaleducation'),
+    path('realestate/', views.realestate, name='realestate'),
+    path('groupcompany/', views.groupcompany, name='groupcompany'),
+    path('client/', views.client, name = 'client'),
+    path('annual-report', views.annual_report, name = 'annual-report'),
+    path('socialinitiatives/', views.globaleducation, name='socialinitiatives'),
+    path('company-history/', views.company_history, name='company-history'),
+    path('financial-result/', views.financial_result, name='financial-result'),
+    path('financial-statement/', views.financial_statement, name='financial-statement'),
+    path('otherpublication/', views.otherpublication, name='otherpublication'),
+    path('boardofdirector/', views.boardofdirector, name='boardofdirector'),
+    path('Composition-of-various-Committees-of-BOD/', views.Composition_of_various_Committees_of_BOD, name='Composition-of-various-Committees-of-BOD'),
+    path('board-meeting/', views.board_meeting, name='board-meeting'),
+    path('Disclosures-under-Regulation/', views.Disclosures_under_Regulation, name='Disclosures-under-Regulation'),
+    path('shareholding-pattern/', views.shareholding_pattern, name='shareholding-pattern'),
+    path('stock-exchange/', views.stock_exchange, name='stock-exchange'),
+    path('Disclosures-under-Regulation.html', views.Disclosures_under_Regulation, name='Disclosures-under-Regulation.html'),
+    path('corporate-governance', views.corporate_governance, name='corporate-governance'),
+    path('agmegm', views.agmegm, name='agmegm'),
+    path('postal-ballot', views.agmegm, name='postal-ballot'),
+    path('annual-return', views.annual_return, name='annual-return'),
+    path('policies', views.policies, name='policies'),
+    path('Investor-Grievances-Cell', views.Investor_Grievances_Cell, name = 'Investor-Grievances-Cell'),
+    path('ipo', views.ipo, name = 'ipo')
+
+]
