@@ -1,23 +1,24 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 
 <head>
 <meta charset="utf-8">
-<title>ACE | Contact</title>
+<title>ACE | Electric Boats</title>
 <!-- Stylesheets -->
-<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-<link href="{% static 'css/style.css' %}" rel="stylesheet">
-<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+<link href="{% static 'css/bootstrap.css'%}" rel="stylesheet">
+<link href="{% static 'css/style.css'%}" rel="stylesheet">
+<link href="{% static 'css/responsive.css'%}" rel="stylesheet">
 
 <!--Color Switcher Mockup-->
-<link href="{% static 'css/color-switcher-design.css' %}" rel="stylesheet">
+<link href="{% static 'css/color-switcher-design.css'%}" rel="stylesheet">
 
 <!--Color Themes-->
-<link id="theme-color-file" href="{% static 'css/color-themes/default-theme.css' %}" rel="stylesheet">
+<link id="theme-color-file" href="{% static 'css/color-themes/default-theme.css'%}" rel="stylesheet">
 
-<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+<link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+<link rel="icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -32,6 +33,7 @@
     <!-- Preloader -->
     <!-- <div class="preloader"></div> -->
  	
+    
     <!-- Main Header-->
     <header class="main-header">
     
@@ -79,25 +81,24 @@
                                                     <li><a href="{% url 'exammanagement' %}">Exam Management</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="assessment.html">Assessment</a></li>
-
+                                            <li><a href="{% url 'assessment' %}">Assessment</a></li>
                                             <li><a href="{% url 'globaleducation' %}">Global Education</a></li>
-                                            <li><a href="{% url 'realestate' %}">Real Estate & Infrastructure Management</a></li>
+                                            <!-- <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li> -->
                                         </ul>
                                     </li>
                                     
                                     <li class="dropdown"><a href="#">Company</a>
                                     	<ul>
                                             <li><a href="{% url 'company-history' %}">Overview</a></li>
-                                            <li><a href="{% url 'groupcompany' %}">Group Companies</a></li>
+                                            <!-- <li><a href="groupcompany.html">Group Companies</a></li> -->
                                             <li><a href="{% url 'client' %}">Clientale</a></li>
                                             <li><a href="{% url 'socialinitiatives' %}">Social Initiatives</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">Investors</a>
                                     	<ul>
-                                            <li><a href="Disclosures-under-Regulation.html">Disclosures under Regulation 46 of the LODR</a></li>
-                                            <li class="dropdown"><a href="#">Financials & Fillings</a>
+                                            <li><a href="{% url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
+                                             <li class="dropdown"><a href="#">Financials & Fillings</a> 
                                                 <ul>
                                                     <li><a href="{% url 'financial-result' %}">Financial Results</a></li>
                                                     <li><a href="{% url 'financial-statement' %}">Financial Statements</a></li>
@@ -122,12 +123,12 @@
                                                     <li><a href="{% url 'annual-return' %}">Annual Return</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="{% url 'policies'%}">Policies & Codes</a></li>
+                                            <li><a href="{% url 'policies' %}">Policies & Codes</a></li>
                                             <li><a href="{% url 'Investor-Grievances-Cell' %}">Investor Grievance Cell</a></li>
                                             <li><a href="{% url 'ipo' %}">IPO</a></li>
                                         </ul>
                                     </li>
-                                    <li class="current"><a href="{% url 'contact' %}">Contact us</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact us</a></li>
                                  </ul>
                             </div>
                         </nav>
@@ -145,9 +146,9 @@
                 <div class="sticky-inner-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index.html" class="img-responsive"><img src="{% static 'images/ace-logo2.png' %}" height="880px" width="150px" alt="" title=""></a>
+                        <a href="{% url 'index' %}" class="img-responsive"><img src="{% static 'images/ace-logo2.png' %}" height="880px" width="150px" alt="" title=""></a>
                     </div>
-
+                    
                     <!--Right Col-->
                     <div class="right-col pull-right">
                         <!-- Main Menu -->
@@ -181,16 +182,15 @@
                                                 </ul>
                                             </li>
                                             <li><a href="{% url 'assessment' %}">Assessment</a></li>
-
                                             <li><a href="{% url 'globaleducation' %}">Global Education</a></li>
-                                            <li><a href="{% url 'realestate' %}">Real Estate & Infrastructure Management</a></li>
+                                            <!-- <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li> -->
                                         </ul>
                                     </li>
                                     
                                     <li class="dropdown"><a href="#">Company</a>
                                     	<ul>
                                             <li><a href="{% url 'company-history' %}">Overview</a></li>
-                                            <li><a href="{% url 'groupcompany' %}">Group Companies</a></li>
+                                            <!-- <li><a href="groupcompany.html">Group Companies</a></li> -->
                                             <li><a href="{% url 'client' %}">Clientale</a></li>
                                             <li><a href="{% url 'socialinitiatives' %}">Social Initiatives</a></li>
                                         </ul>
@@ -198,7 +198,7 @@
                                     <li class="dropdown"><a href="#">Investors</a>
                                     	<ul>
                                             <li><a href="{% url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
-                                            <li class="dropdown"><a href="#">Financials & Fillings</a>
+                                            <!-- <li class="dropdown"><a href="#">Financials & Fillings</a> -->
                                                 <ul>
                                                     <li><a href="{% url 'financial-result' %}">Financial Results</a></li>
                                                     <li><a href="{% url 'financial-statement' %}">Financial Statements</a></li>
@@ -228,14 +228,13 @@
                                             <li><a href="{% url 'ipo' %}">IPO</a></li>
                                         </ul>
                                     </li>
-                                    <li class="current"><a href="{% url 'contact' %}">Contact us</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact us</a></li>
                                  </ul>
                             </div>
                         </nav>
                         <!-- Main Menu End-->
                         
                        
-
                     </div>
                     
                 </div>
@@ -247,9 +246,9 @@
     <!--End Main Header -->
     
     <!--Page Title-->
-    <section class="page-title" style="background-image:url({% static 'images/background/subpage.jpg' %});">
+    <section class="page-title" style="background-image:url('{% static 'images/background/subpage.jpg' %}')";>
         <div class="auto-container">
-            <h1>Contact us</h1>
+            <h1>Electric Boats</h1>
         </div>
         
     </section>
@@ -260,135 +259,96 @@
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <ul class="bread-crumb pull-left">
-                    <li><a href="{% url 'index' %}">Home</a></li>
-                    <li>Contact us</li>
+                    <li><a href="{% url 'index' %}" style="font-size: 20px;"><b>Home</b></a></li>
+
+                    <li style="font-size: 17px;"><b>E-Mobiliy</b></li>
+                    <li style="font-size: 17px;"><b>Electric Boats</b></li>
                 </ul>
-                <!--<div class="text pull-right">Certified Company ISO 9001-2008</div>-->
+            </div>
+        </div>
+    </div><br>
+    <!--End Page Info-->
+    <div class="description-section">
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="about-section-three">
+                    <div class="sec-title">
+                        <h2>Electric Boats: Navigating a Sustainable Future</h2>
+                    </div>
+                    <div class="row clearfix">
+                        <!--Content Column-->
+                        <div class="content-column col-md-8 col-sm-12 col-xs-12">
+                            <div class="inner-column">
+                                <div class="text">
+                                   
+                                    
+                                    <p>Welcome to the future of boating – where eco-friendliness meets tranquility. ACE is forgoing tech-alliance with global industry partners for entry in Asian e-boat markets. Electric boats have emerged as a green alternative, revolutionizing our exploration of waterways. Here's a comprehensive glimpse into the world of electric boats and why they are the preferred choice for environmentally conscious boaters.</p>
+
+                                    <p><h3><b>Key Features:</b></h3></p>
+                                    <h4><b>Zero Emissions:</b></h4>
+                                    Electric boats operate without the smoke and fumes associated with traditional engines, ensuring a clean and green boating experience.
+                                    <h4><b>Quiet Operation:</b></h4>
+
+                                        Enjoy the serenity of the water without the noise of a roaring engine. Electric motors operate quietly, minimizing noise pollution.
+                                        
+                                        <h4><b>Instant Torque and Responsive Handling:</b></h4>
+                                        
+                                        Experience the thrill of immediate torque, providing rapid acceleration and responsive handling for a dynamic on-water adventure.
+                                        
+                                        <br><h4><b>Low Maintenance:</b></h4>
+                                        
+                                        <p>With fewer moving parts, electric propulsion systems require less maintenance, saving both time and money. ACE shall provide in-house product maintenance & warranty support for its customers.</p>
+                                        
+                                       <p> <h3><b>Power Sources:</b></h3></p>
+                                        
+                                        <h4><b>On-board Batteries:</b></h4>
+                                        
+                                        Many electric boats utilize advanced rechargeable batteries, offering enhanced performance and range for extended journeys.
+                                        
+                                        <h4><b>Solar Power:</b></h4>
+                                        
+                                        Embrace sustainability with solar panels that harness energy from the sun, providing a renewable and eco-friendly power source.
+                                        
+                                       <h4><b> Generators:</b></h4>
+                                        
+                                        <p>Some electric boats incorporate generators to extend range or recharge batteries while underway.</p>
+                                        
+                                        <p> <h3><b>Practical considerations:</b></h3></p>
+                                        
+                                        <h4><b>Range and Charging:</b></h4>
+                                        
+                                        The range of electric boats varies based on factors like battery capacity and speed. Charging infrastructure, available at marinas and waterfront facilities, is crucial for practical use.
+                                        
+                                        <h4><b>Smooth Boating Experience:</b></h4>
+                                        
+                                        The quiet operation of electric boats enhances the overall boating experience, allowing passengers to connect with nature without engine noise.
+                                        
+                                        <h4><b>User-Friendly Controls:</b></h4>
+                                        
+                                        <p>Electric propulsion systems feature intuitive controls, making them accessible to both seasoned boaters and beginners.</p>
+                                        
+                                        <p><h3><b>Finance and Incentives:</b></h3></p>
+                                        
+                                        <h4><b>Incentives and Subsidies:</b></h4>
+                                        
+                                        <p>ACE would extend government subsidies as the case may be. Explore regions where incentives or subsidies are offered to promote the adoption of electric boats, supporting a sustainable and responsible boating community.</p>
+                                        
+                                        Embrace a cleaner and quieter boating experience with electric boats. Whether you're a seasoned mariner or a first-time boater, these vessels pave the way for a more sustainable and enjoyable journey on the water. Join the movement towards a greener future, one electric boat ride at a time. Discover the beauty of eco-friendly boating and the exciting advancements propelling us into a new era of marine exploration.
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-column col-md-4 col-sm-12 col-xs-12">
+                            <div class="image">
+                                <img src="{% static 'images/img/boat.jpg' %}" alt="" />
+                            </div>
+                        </div>
+                        <!--Content Column End-->
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!--End Page Info-->
-    
-    <style>
-        .google-maps {
-          position: relative;
-          padding-bottom: 25%; 
-          height: 0;
-          overflow: hidden;
-        }
-        .google-maps iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100% !important;
-          height: 100% !important;
-        }
-      </style>
-      
-      <div class="google-maps">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6205236859696!2d77.30785737503399!3d28.64113328369089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4a3e4000001%3A0xd4b51953079fca0b!2sAce%20Integrated%20Solutions%20Limited!5e0!3m2!1sen!2sin!4v1700886660067!5m2!1sen!2sin" 
-          width="200"
-          height="50"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
-    
-    <!--Contact Section-->
-    <section class="contact-section">
-    	<div class="auto-container">
-        	<div class="contact-title">
-            	<h2>Drop us message</h2>
-                <div class="text">Please use this form to send us a message.</div>
-            </div>
-        	<div class="row clearfix">
-            	
-                <!--Form Column-->
-                <div class="form-column col-md-8 col-sm-12 col-xs-12">
-                	<div class="inner-column">
-                    	<!--Contact Form-->
-                        <div class="contact-form">
-                            <form method="post" id= "contact" action="{% url 'contact' %}">
-                                {% csrf_token %}
-                                <div class="row clearfix">
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id="firstName" name="firstName" value="" placeholder="First name" required>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id = "lastName" name="lastName" value="" placeholder="Last name" required>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id = "emailId" name="emailId" value="" placeholder="Email" required>
-                                    </div>
-
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id = "message" name="message" value="" placeholder="message" required>
-                                    </div>
-
-                                    
-                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <button id= "submit" type="submit" class="theme-btn btn-style-one">Submit now</button>
-                                    </div>                                        
-                                </div>
-                            </form>
-                            <script>
-                                document.getElementById("submit").addEventListener("submit", function(event) {
-                                  event.preventDefault(); // Prevents the default form submission
-                                
-                                  // Capture input values
-                                  var firstName = document.getElementById("firstName").value;
-                                  var lastName = document.getElementById("lastName").value;
-                                  var emailId = document.getElementById("emailId").value;
-                                  var message = document.getElementById("message").value;
-                                
-                                  // You can now send these values to the backend using AJAX or Fetch API
-                                  // Example using Fetch API:
-                                  fetch('http://127.0.0.1:8000/contact/', {
-                                    method: 'POST',
-                                    headers: {
-                                      'Content-Type': 'application/json',
-                                    },
-                                    body: JSON.stringify({ firstName: firstName, lastName: lastName, emailId: emailId, message: message }),
-                                  })
-                                  .then(response => response.json())
-                                  .then(data => {
-                                    // Handle the response from the backend
-                                    console.log('Success:', data);
-                                  })
-                                  .catch((error) => {
-                                    console.error('Error:', error);
-                                  });
-                                });
-                                </script>
-                        </div>
-                        <!--End Contact Form-->
-                    </div>
-                </div>
-                
-                <!--Info Column-->
-                <div class="info-column col-md-4 col-sm-12 col-xs-12">
-                	<div class="inner-column">
-                    	<ul>
-                        	<li><span>Address:</span>B-13, DSIDC Complex,
-                                Patparganj Industrial Area, Delhi - 110 092</li>
-                            <li><span>E-mail address (CMD): </span>info@aceintegrated.com</li>
-                            <li><span>Business Enquiry : </span>marketing@aceintegrated.com</li>
-                            <li><span>General Information :</span>info@aceintegrated.com</li>
-                            <li><span>phone:</span>+91 - 9650 339 995</li>
-                        </ul>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <!--End Contact Section-->
-
-    
     
     <!--Main Footer-->
     <footer class="main-footer">
@@ -405,7 +365,7 @@
                             <div class="footer-column col-md-7 col-sm-6 col-xs-12">
                                 <div class="footer-widget logo-widget">
                                     <div class="logo">
-                                    	<a href="index.html"><img src="{% static 'images/ace-logo2.png' %}" height="850px" width="200px" alt="" /></a>
+                                    	<a href="{% url 'index' %}"><img src="{% static 'images/ace-logo2.png' %}" height="850px" width="200px" alt="" /></a>
                                     </div>
                                     <div class="text">Collaboratively administrate em powered markets via plug and play networks. Dynamically procrastinate B2C users after installed.</div>
                                 </div>
@@ -417,7 +377,7 @@
                                 	<h2>Quick Links</h2>
                                     <div class="widget-content">
 										<ul class="list">
-                                        	<li><a href="index.html">Home</a></li>
+                                        	<li><a href="{% url 'index' %}">Home</a></li>
                                             <li><a href="#">About Us</a></li>
                                             <li><a href="#">Testimonials</a></li>
                                             <li><a href="#">Request Call Back</a></li>
@@ -506,14 +466,14 @@
     </div>
     <div class="various-color clearfix">
         <div class="colors-list">
-            <span class="palate default-color active" data-theme-file="{% static 'css/color-themes/default-theme.css' %}"></span>
-            <span class="palate teal-color" data-theme-file="{% static 'css/color-themes/teal-theme.css' %}"></span>
-            <span class="palate green-color" data-theme-file="{% static 'css/color-themes/green-theme.css' %}"></span>
-            <span class="palate aqua-color" data-theme-file="{% static 'css/color-themes/aqua-theme.css' %}"></span>
-            <span class="palate blue-color" data-theme-file="{% static 'css/color-themes/blue-theme.css' %}"></span>
-            <span class="palate orange-color" data-theme-file="{% static 'css/color-themes/orange-theme.css' %}"></span>
-            <span class="palate olive-color" data-theme-file="{% static 'css/color-themes/olive-theme.css' %}"></span>
-            <span class="palate red-color" data-theme-file="{% static 'css/color-themes/red-theme.css' %}"></span>
+            <span class="palate default-color active" data-theme-file="css/color-themes/default-theme.css"></span>
+            <span class="palate teal-color" data-theme-file="css/color-themes/teal-theme.css"></span>
+            <span class="palate green-color" data-theme-file="css/color-themes/green-theme.css"></span>
+            <span class="palate aqua-color" data-theme-file="css/color-themes/aqua-theme.css"></span>
+            <span class="palate blue-color" data-theme-file="css/color-themes/blue-theme.css"></span>
+            <span class="palate orange-color" data-theme-file="css/color-themes/orange-theme.css"></span>
+            <span class="palate olive-color" data-theme-file="css/color-themes/olive-theme.css"></span>
+            <span class="palate red-color" data-theme-file="css/color-themes/red-theme.css"></span>
         </div>
     </div>
 
@@ -531,12 +491,9 @@
 <script src="{% static 'js/owl.js' %}"></script>
 <script src="{% static 'js/wow.js' %}"></script>
 <script src="{% static 'js/appear.js' %}"></script>
-<script src="{% static 'js/validate.js' %}"></script>
 <script src="{% static 'js/script.js' %}"></script>
-
 
 <!--Color Switcher-->
 <script src="{% static 'js/color-settings.js' %}"></script>
 </body>
-
 </html>

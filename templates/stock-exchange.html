@@ -1,0 +1,752 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ACE | Stock Exchange Intimation</title>
+    <!-- Stylesheets -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    
+    <!--Color Switcher Mockup-->
+    <link href="{% static 'css/color-switcher-design.css'%}" rel="stylesheet">
+    
+    <!--Color Themes-->
+    <link id="theme-color-file" href="{% static 'css/color-themes/default-theme.css'%}" rel="stylesheet">
+    
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+    </head>
+
+<body>
+
+<div class="page-wrapper">
+ 	
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+ 	
+    
+    <!-- Main Header-->
+    <header class="main-header">
+    
+    	
+        
+        <!-- Main Box -->
+    	<div class="main-box">
+        	<div class="auto-container">
+            	<div class="outer-container clearfix">
+                    <!--Logo Box-->
+                    <div class="logo-box">
+                        <div class="logo"><a href="{% url 'index'%}"><img src="images/ace-logo2.png" alt=""></a></div>
+                    </div>
+                    
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
+                    
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->    	
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="{% url 'index'%}">Home</a></li>
+                                    <li class="dropdown"><a href="#">Business Solutions</a>
+                                    	<ul>
+                                            <li class="dropdown"><a href="#">E-Mobility</a>
+                                                <ul>
+                                                    <li><a href="{% url 'electricbike'%}">Electric Bikes</a></li>
+                                                    <li><a href="{% url 'electricboat'%}">Electric Boats</a></li>
+                                                    <li><a href="{% url 'drone'%}">Drones</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Information technology</a>
+                                                <ul>
+                                                    <li><a href="{% url 'cybersecurity'%}">Cyber Security</a></li>
+                                                    <li><a href="{% url 'supplychain'%}">Supply Chain Management</a></li>
+                                                    <li><a href="{% url 'exammanagement'%}">Exam Management</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'assessment'%}">Assessment</a></li>
+                                            <li><a href="{% url 'globaleducation'%}">Global Education</a></li>
+                                            <!-- <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li> --> -->
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown"><a href="#">Company</a>
+                                    	<ul>
+                                            <li><a href="{% url 'company-history'%}">Overview</a></li>
+                                                <!-- <li><a href="groupcompany.html">Group Companies</a></li> --> 
+                                                <li><a href="{% url 'client'%}">Clientale</a></li>
+                                                <li><a href="{% url 'socialinitiatives'%}">Social Initiatives</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Investors</a>
+                                    	<ul>
+                                            <li><a href="{% url 'Disclosures-under-Regulation'%}">Disclosures under Regulation 46 of the LODR</a></li>
+                                            <li class="dropdown"><a href="#">Financials & Fillings</a> 
+                                                <ul>
+                                                    <li><a href="{% url 'financial-result'%}">Financial Results</a></li>
+                                                    <li><a href="{% url 'financial-statement'%}">Financial Statements</a></li>
+                                                    <li><a href="{% url 'annual-report'%}">Annual Reports</a></li>
+                                                    <li><a href="{% url 'otherpublication'%}">Other Publications</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Board Information</a>
+                                                <ul>
+                                                    <li><a href="{% url 'boardofdirector'%}">Board of Directors</a></li>
+                                                    <li><a href="{% url 'Disclosures-under-Regulation'%}">Disclosures under Regulation 46 of the LODR</a></li>
+                                                    <li><a href="{% url 'board-meeting'%}">Board Meeting </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Compliances</a>
+                                                <ul>
+                                                    <li><a href="{% url 'shareholding-pattern'%}">Shareholding Pattern</a></li>
+                                                    <li><a href="{% url 'corporate-governance'%}">Corporate Governance Report</a></li>
+                                                    <li><a href="{% url 'stock-exchange'%}">Stock Exchange Intimation</a></li>
+                                                    <li><a href="{% url 'agmegm'%}">AGM/EGM</a></li>
+                                                    <li><a href="{% url 'postal-ballot'%}">Postal Ballot</a></li>
+                                                    <li><a href="{% url 'annual-return'%}">Annual Return</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'policies'%}">Policies & Codes</a></li>
+                                            <li><a href="{% url 'Investor-Grievances-Cell'%}">Investor Grievance Cell</a></li>
+                                            <li><a href="{% url 'ipo'%}">IPO</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contact'%}">Contact us</a></li>
+                                 </ul>
+                            </div>
+                        </nav>
+                        
+                    </div>
+                    <!--Nav Outer End-->
+                    
+            	</div>    
+            </div>
+        </div>
+    
+    	<!--Sticky Header-->
+        <div class="sticky-header">
+        	<div class="auto-container">
+                <div class="sticky-inner-container clearfix">
+                    <!--Logo-->
+                    <div class="logo pull-left">
+                        <a href="{% url 'index'%}" class="img-responsive">
+                            <img src="{% static 'images/ace-logo2.png'%}" height="880px" width="150px" alt="" title=""></a>
+                    </div>
+                    
+                    <!--Right Col-->
+                    <div class="right-col pull-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->    	
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li><a href="{% url 'index'%}">Home</a></li>
+                                    <li class="dropdown"><a href="#">Business Solutions</a>
+                                    	<ul>
+                                            <li class="dropdown"><a href="#">E-Mobility</a>
+                                                <ul>
+                                                    <li><a href="{% url 'electricbike'%}">Electric Bikes</a></li>
+                                                    <li><a href="{% url 'electricboat'%}">Electric Boats</a></li>
+                                                    <li><a href="{% url 'drone'%}">Drones</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Information technology</a>
+                                                <ul>
+                                                    <li><a href="{% url 'cybersecurity'%}">Cyber Security</a></li>
+                                                    <li><a href="{% url 'supplychain'%}">Supply Chain Management</a></li>
+                                                    <li><a href="{% url 'exammanagement'%}">Exam Management</a></li>
+                                                </ul>
+                                            </li>
+                                                <li><a href="{% url 'assessment'%}">Assessment</a></li>
+                                                <li><a href="{% url 'globaleducation'%}">Global Education</a></li>
+                                            <!-- <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li> --> -->
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="dropdown"><a href="#">Company</a>
+                                        <ul>
+                                            <li><a href="{% url 'company-history'%}">Overview</a></li>
+                                            <!-- <li><a href="groupcompany.html">Group Companies</a></li> -->
+                                            <li><a href="{% url 'client'%}">Clientale</a></li>
+                                            <li><a href="{% url 'socialinitiatives'%}">Social Initiatives</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown"><a href="#">Investors</a>
+                                        <ul>
+                                            <li><a href="{% url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
+                                            <!-- <li class="dropdown"><a href="#">Financials & Fillings</a> -->
+                                                <ul>
+                                                    <li><a href="{% url 'financial-result' %}">Financial Results</a></li>
+                                                    <li><a href="{% url 'financial-statement' %}">Financial Statements</a></li>
+                                                    <li><a href="{% url 'annual-report' %}">Annual Reports</a></li>
+                                                    <li><a href="{% url 'otherpublication' %}">Other Publications</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Board Information</a>
+                                                <ul>
+                                                    <li><a href="{% url 'boardofdirector' %}">Board of Directors</a></li>
+                                                    <li><a href="{% url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
+                                                    <li><a href="{% url 'board-meeting' %}">Board Meeting </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown"><a href="#">Compliances</a>
+                                                <ul>
+                                                    <li><a href="{% url 'shareholding-pattern' %}">Shareholding Pattern</a></li>
+                                                    <li><a href="{% url 'corporate-governance' %}">Corporate Governance Report</a></li>
+                                                    <li><a href="{% url 'stock-exchange' %}">Stock Exchange Intimation</a></li>
+                                                    <li><a href="{% url 'agmegm' %}">AGM/EGM</a></li>
+                                                    <li><a href="{% url 'postal-ballot' %}">Postal Ballot</a></li>
+                                                    <li><a href="{% url 'annual-return' %}">Annual Return</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="{% url 'policies' %}">Policies & Codes</a></li>
+                                            <li><a href="{% url 'Investor-Grievances-Cell' %}">Investor Grievance Cell</a></li>
+                                            <li><a href="{% url 'ipo' %}">IPO</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="{% url 'contact'%}">Contact us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                        
+                       
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    
+    </header>
+    <!--End Main Header -->
+    
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url({% static 'images/background/subpage.jpg' %});">
+        <div class="auto-container">
+            <h1>Stock Exchange Intimation</h1>
+        </div>
+        
+    </section>
+    <!--End Page Title-->
+    
+    <!--Page Info-->
+    <div class="page-info">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <ul class="bread-crumb pull-left">
+                    <li><a href="{% url 'index' %}" style="font-size: 20px;"><b>Home</b></a></li>
+                    <li style="font-size: 17px;"><b>Investors</b></li>
+                    <li style="font-size: 17px;"><b>Compliances</b></li>
+                    <li style="font-size: 17px;"><b>Stock Exchange Intimation</b></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div><br>
+    <!--End Page Info-->
+    
+    <!--Project Financial Results-->
+    <section class="section-bg">
+        <div class="container"><br>
+            <div class="sec-title">
+                <h2>Stock Exchange Intimation</h2>
+            </div>
+          
+          <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="home-text">
+                <p>
+                  <div>
+                    <style>
+                        .accordion {
+                            background-color: #eee;
+                            color: #444;
+                            cursor: pointer;
+                            padding: 18px;
+                            width: 100%;
+                            border: none;
+                            text-align: left;
+                            outline: none;
+                            font-size: 15px;
+                            transition: 0.4s;
+                        }
+            
+                            .active, .accordion:hover {
+                                background-color: #ccc;
+                            }
+            
+                            .accordion:after {
+                                content: '\002B';
+                                color: #777;
+                                font-weight: bold;
+                                float: right;
+                                margin-left: 5px;
+                            }
+            
+                        .active:after {
+                            content: "\2212";
+                        }
+            
+                        .panel {
+                            padding: 0 18px;
+                            background-color: white;
+                            max-height: 0;
+                            overflow: auto;
+                            transition: max-height 0.2s ease-out;
+                            margin-bottom: 5px;
+                        }
+      
+                    </style>
+
+<button class="accordion">FY 2023-24</button>
+<div class="panel">
+            <ul>
+<li><a href="#" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure of Related Party Transactions for the half year ended September 30, 2023</a></li>
+<li><a href="Document/Stx_Intimation_Outcome_of_BM_10112023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 10.11.2023</a></li>
+<li><a href="Document/AGM_Minutes_29092023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Minutes of 26th Annual General Meeting of the Company</a></li>
+<li><a href="Document/SEIntimation_Reg76_30092022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Reconciliation of Share Capital Audit Report for the quarter ended September 30, 2023</a></li>
+<li><a href="Document/SEIntimation_Reg74_5.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th September, 2023</a></li>
+<li><a href="Document/SE_Intimation_ScrutinizersReport_VotingResult_26AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Voting Results and Scrutinizer Report of 26th AGM of the Company</a></li>
+<li><a href="Document/SE_Intimation_for_Reappointment_Ms_Shivani_30092023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Re-appointment of Ms. Shivani Chandra who liable to retire by rotation</a></li>
+<li><a href="Document/Stx_Intimation_AGM_Proceeding_30092023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Proceeding of 26th AGM of the Company</a></li>
+<li><a href="Document/SE_Intimation_Closure_of_Trading_Window_28092923.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 28.09.2023</a></li>
+<li><a href="Document/SE_Intimation_NpAdvt_AGMNotice_05092023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Newspaper Advertisement of Notice for 26th AGM, Book Closure and e-voting Facility</a></li>
+<li><a href="Document/SE_Intimation_AGM_Notice_04092023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Notice of 26th AGM of the Company</a></li>
+<li><a href="Document/SE_Intimation_AGM_Book_closure_04092023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of date of 26th Annual General Meeting, cut-off date for e-voting, e-voting period and Book Closure pursuant to Regulation 42 of the SEBI (LODR) Regulations, 2015</a></li>
+<li><a href="Document/Change_in_Director_30082023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation pursuant to Regulation 30 - Change in Director(s) / KMP</a></li>
+<li><a href="Document/IntimationtoStx_ResignationofDSSrivastava_ID.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation of Mr. Deep Shankar Srivastava from the Post of ID w.e.f. 10.08.2023</a></li>
+<li><a href="Document/SEIntimation_Reg76.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Reconciliation of Share Capital Audit Report for the quarter ended June 30, 2023</a></li>
+<li><a href="Document/SEIntimation_Reg74_5.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th June, 2023</a></li>
+<li><a href="Document/SE_Intimation_Closure_of_Trading_Window_29062023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 29.06.2023</a></li>
+<li><a href="Document/Intimation_Signing_MOU.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for entering into MOU / Agreements with Megasys India Private Limited</a></li>
+<li><a href="Document/SE_Intimation_Appoint_Secretarial_Auditor.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for the appointment of Secretarial Auditor for conducting Secretarial Audit for FY 2023-24</a></li>
+<li><a href="Document/Intimate_RPT_Disclosure_NSE.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure of Related Party Transactions for the half year and year ended March 31, 2023</a></li>
+<li><a href="Document/OutcomeofBM_FR_30052023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 30.05.2023.</a></li>
+<li><a href="Document/Stx_intimation_24A.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Annual Secretarial Compliance Report for the year ended March 31, 2023.</a></li>
+<li><a href="Document/Intimation_NSE_appointment.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation pursuant to Regulation 30 - Change in Director(s) / KMP</a></li>
+<li><a href="Document/SEIntimation76.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Reconciliation of Share Capital Audit Report for the quarter ended March 31, 2023</a></li>
+<li><a href="Document/SE_Intimation_Reg40_9.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Certificate pursuant to Regulation 40(9) of the SEBI (LODR) Regulations, 2015 for the year ended March 31, 2023</a></li>
+<li><a href="Document/SE_Intimation_7_3.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Certificate under Regulation 7(3) of the SEBI (LODR) Regulations, 2015 for the year ended March 31, 2023</a></li>
+<li><a href="Document/SEIntimationReg74_5.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended March 31, 2023</a></li>
+<li><a href="Document/SE_Intimation_Reg_31_SEBI_Takeover_31032023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation under Reg 31(4) of SEBI (SAST) Regulations 2011</a></li>
+<li><a href="Document/SEIntimationClosureofTradingWindow.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 29.03.2023</a></li>
+<li><a href="Document/Intimation_to_Stx_Resignation_of_ID_and_CEO.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation of Mr. Rajeev Ranjan Sarkari from the Post of ID and Mr. Chandra Shekhar Verma from the Post of CEO  w.e.f. 18.03.2023</a></li>
+ </ul>
+        </div>
+        <button class="accordion">FY 2022-23</button>
+        <div class="panel">
+            <ul>
+<li><a href="Document/SE_Intimation_Closure_of_Trading_Window_28092923.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 28.09.2023</a></li>
+<li><a href="Document/Newspaper_Publication_UnAudited_FR_Standalone_for_31122022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Newspaper Publication of Un-Audited Financial Results (Standalone) for the quarter ended December 31, 2022</a></li>
+<li><a href="Document/OutcomeofBoardMeeting_13022023.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Outcome of Board Meeting held on 13-Feb-2023 to consider financial statements for the period ended December 2022 and other business matters</a></li>
+<li><a href="Document/SEIntimationReg74_5.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended December 31, 2022</a></li>
+<li><a href="Document/SEIntimationClosureofTradingWindow.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 31.12.2022</a></li>
+<li><a href="Document/RPT_Disclosure_to_NSE.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure of Related Party Transactions for the half year ended September 30, 2022</a></li>
+<li><a href="Document/Newspaper_Publication_UnAudited_Fin_Results_Standalone_halfyear_30092022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Newspaper Publication of Un-Audited Financial Results (Standalone) for the half year ended 30th September, 2022</a></li>
+<li><a href="Document/Stx_Intimatiuon_for_Outcome_of_BM_11112022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Outcome of Board Meeting held on 11-Nov-2022 to consider financial statements for the period ended September 2022 and other business matters</a></li>
+<li><a href="Document/Minutes_25AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Minutes of 25th Annual General Meeting of the Company</a></li>
+<li><a href="Document/Intimation_Certi_Regulation_74_5_SEBI_30092022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended September 30, 2022</a></li>
+<li><a href="Document/SE_Intimation_Scrutinizers_Report_Voting_Result_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Voting Results and Scrutinizer Report of 25th AGM of the Company</a></li>
+<li><a href="Document/Intimation_appoint_Sanmarks_Associates_auditor_30092022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for appointment of Sanmarks and Associates as statutory auditor of the company w.e.f. 30-Sep-2022</a></li>
+<li><a href="Document/Intimation_Reappoint_AmitaVerma_rotation.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Re-appointment of Mrs. Amita Verma who liable to retire by rotation</a></li>
+<li><a href="Document/SE_Intimation_Proceeding_of_25TH_AGM_ACE.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Proceeding of 25th AGM of the Company</a></li>
+<li><a href="Document/Intimation_Closure_Trading_Window_29092022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 29.09.2022</a></li>
+<li><a href="Document/Register_Members_Share_Tr_Books_24_30092022_hold_25AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Register of Members & Share Transfer Books of the Company will remain closed from 24-Sep-2022 to 30-Sep-2022 for the purpose of holding 25th Annual General Meeting</a></li>
+<li><a href="Document/SE_Intimation_Newspaper_Advt.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Newspaper Advertisements for Notice of 25th Annual General Meeting, Book Closure and E-Voting facility</a></li>
+<li><a href="Document/Notice_of_25th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Notice of 25th AGM of the Company</a></li>
+<li><a href="Document/Intimation_25AGM_Evoting_Reg_42_SEBI.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of date of 25th Annual General Meeting, cut-off date for e-voting, e-voting period and Book Closure pursuant to Regulation 42 of the SEBI (LODR) Regulations, 2015</a></li>
+<li><a href="Document/Newspaper_Advt_Result_of_PB_to_NSE.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Newspaper Publication of Results of Postal Ballot</a></li>
+<li><a href="Document/Intimation_to_NSE_VR_ScutRpt.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Result of Postal Ballot</a></li>
+<li><a href="Document/Proceeding_Postal_Ballot.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Proceeding Postal Ballot</a></li>
+                <li><a href="Document/Newspaper_Advt_PostalBallot_14072022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Newspaper Advertisement of Postal Ballot Notice</a></li>
+                <li><a href="Document/Intimation_Notice_Postal_Ballot.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Notice of Postal Ballot</a></li>
+                <li><a href="Document/Intimation_Certificate_under_Regulation_74(5)_SEBI30062022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th June, 2022</a></li>
+                <li><a href="Document/Disclosure_Reg_7(1)_read_with_Reg_6_SEBI.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure under Reg 7(1) read with Reg 6 of SEBI (PIT) Regulations, 2015</a></li>
+                <li><a href="Document/Intimation_Re_Constitution_Committee.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Re_Constitution of Committee w.e.f. 08.07.2022</a></li>
+                <li><a href="Document/Intimation_Appointment_Shivani_Chandra_Add_Director_ED.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of Ms. Shivani Chandra as an Additional Director in the Capacity of (ED) w.e.f 08.07.2022</a></li>
+                <li><a href="Document/Outcome_of_BM_08072022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of BM dated 08.07.2022</a></li>
+                <li><a href="Document/Prior_intimation_Board_Meeting_08072022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior intimation of Board Meeting dated 08.07.2022</a></li>
+                <li><a href="Document/Intimation_appointment_Secretraial_Auditor_Secretarial_Audit.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for the appointment of Secretraial Auditor for conducting Secretarial Audit for FY 2022-23</a></li>
+                <li><a href="Document/Intimation_Outcome_BM_30052022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of BM dated 30.05.2022</a></li>
+                <li><a href="Document/Prior_intimation_Board_Meeting_30052022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior intimation of Board Meeting dated 30.05.2022</a></li>
+                <li><a href="Document/Intimation_Resignation_Anadi_Shrivastav_NED.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation of Mr. Anadi Shrivastav from the Post of NED w.e.f. 12.05.2022</a></li>
+                <li><a href="Document/Intimation_empanelment_Online_Offline_exams.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of empanelment for Online, Offline exams</a></li>
+                <li><a href="Document/Intimation_Non_Applicability_Annal_Secretarial_Compliance_Report.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Non Applicability of Annal Secretarial Compliance Report 24A</a></li>
+                <li><a href="Document/Intimation_Non_Applicability_Reg_15_LODR.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Non Applicability Reg 15 of LODR</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_Regulations_2018_quarter_31032022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 31st March, 2022</a></li>
+                <li><a href="Document/Intimation_Reg_31(4)_SEBI_SAST_Regulations_2011.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation under Reg 31(4) of SEBI (SAST) Regulations 2011</a></li>
+                <li><a href="Document/Intimation_Closure_Trading_Window_31032022.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 31.03.2022</a></li>
+            </ul>
+        </div>
+        <button class="accordion">FY 2021-22</button>
+        <div class="panel">
+            <ul>
+                <li><a href="Document/Intimationt_Appointment_RahulChauhan_CS.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimationt for Appointment of Mr. Rahul Chauhan as Company Secretary & Compliance Officer w.e.f. 16.03.2022</a></li>
+                <li><a href="Document/Resignation_AbhaJain_CS.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Resignation of Mrs Abha Jain Company Secretary w.e.f. 18.02.2022</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_quarter_30122021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th Dec, 2021</a></li>
+                <li><a href="Document/Nonapplicability_Regulation23_9.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Non-applicability of Regulation 23(9)</a></li>
+                <li><a href="Document/Outcome_of_BM_09112021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 09.11.2021</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_quarter_30092021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th Sep, 2021</a></li>
+                <li><a href="Document/Intimation_allotment_Bonus_Shares.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for allotment of Bonus Shares</a></li>
+                <li><a href="Document/Intimation_Voting_Results_Scrutinizer_Report_24th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Voting Results and Scrutinizer Report of 24th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Amendment_MOA_AOA.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Amendment to MOA AOA</a></li>
+                <li><a href="Document/Intimation_Closure_Trading_Window_30092021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 30.09.2021</a></li>
+                <li><a href="Document/Intimation_Proceeding_24thAGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Proceeding of 24th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Record_Date_BonusIssue.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Record Date for Bonus Issue</a></li>
+                <li><a href="Document/Intimation_Book_Closure_purpose_24thAGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Book Closure for the purpose of 24th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Notice_24thAGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Notice of 24th AGM of the Company</a></li>
+                <li><a href="Document/SE_Intimation_Notice_of_BM_09112021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 09.11.2021</a></li>
+                <li><a href="Document/Intimation_Appointment_Kumar_Vishwajeet_Singh_Additional_Director.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation_for Appointment of Mr. Kumar Vishwajeet Singh as an Additional Director (NED-ID) w.e.f 30.08.2021</a></li>
+                <li><a href="Document/Intimation_Outcome_BoardMeeting_30082021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 30.08.2021</a></li>
+                <li><a href="Document/Prior_Intimation_Board_Meeting_30082021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 30.08.2021</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_30062021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th June, 2021</a></li>
+                <li><a href="Document/Intimation_Appointmt_AbhaJain_CS.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointmt of Mrs. Abha Jain Company Secretary w.e.f. 30.06.2021</a></li>
+                <li><a href="Document/Outcome_of_BM_30062021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 30.06.2021</a></li>
+                <li><a href="Document/SE_Intimation_Notice_of_BM_30062021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 30.06.2021</a></li>
+                <li><a href="Document/Intimation_Resignation_Ranjeet_Singh_CS.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation of Mr. Ranjeet Singh (CS) w.e.f. 04.06.2021</a></li>
+                <li><a href="Document/Intimation_Resignation_Vikram_Gandhi_ID_02062021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation of Mr. Vikram Gandhi from the Position of ID w.e.f. 02.06.2021</a></li>
+                <li><a href="Document/Intimation_NonApplicability_Annal_Secretarial_Compliance_Report-24A.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Non Applicability of Annal Secretarial Compliance Report 24A</a></li>
+                <li><a href="Document/Intimation _Non_Applicability_Reg_15-LODR.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Non Applicability Reg 15 of LODR</a></li>
+                <li><a href="Document/Intimation_Certificate_under_Regulation_74(5)_SEBI_DP_Regulations_2018_31032021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 31st March, 2021</a></li>
+                <li><a href="Document/Intimation_Reg_31(4)_SEBI_SAST_Regulations_2011.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation under Reg 31(4) of SEBI (SAST) Regulations 2011</a></li>
+                <li><a href="Document/Intimation_Closure_of_Trading_Window_01042021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 01.04.2021</a></li>
+            </ul>
+        </div>
+        <button class="accordion">FY 2020-21</button>
+        <div class="panel">
+            <ul>
+                <li><a href="Document/Intimation_Voting_Results_Scrutinizer_Report_23rd_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Voting Results and Scrutinizer Report of 23rd AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Appointment_RelatedParty_Shivangi_Chandra_Cheief_Legal_Advisor.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of Related Party Ms. Shivangi Chandra as Cheief Legal Advisor by Shareholders</a></li>
+                <li><a href="Document/Intimation_Appointment_Rajeev_Ranjan_Sarkari_ID_23_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of Mr. Rajeev Ranjan Sarkari as an ID in the 23rd AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Reappointment_of_Mrs_Amita_Verma_rotation.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Re-appointment of Mrs. Amita Verma who liable to retire by rotation</a></li>
+                <li><a href="Document/Intimation_Proceeding_23_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Proceeding of 23rd AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Non_Applicability_RPT_filing_23(9)_LODR.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Non Applicability RPT filing under 23(9) of LODR</a></li>
+                <li><a href="Document/Intimation_Book_Closure_23rd_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Book Closure for the purpose of 23rd AGM of the Company</a></li>
+                <li><a href="Document/SE_Intimation_Notice_of_BM_12112020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 12.11.2020</a></li>
+                <li><a href="Document/Intimation_Remote_Evoting_facility_23rdAGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Remote E-voting facility at  23rd AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Notice_23rdAGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Notice of 23rd AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Appointment_ShivangiChandra_Cheief-Legal_Advisor_BOD.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of Related Party Ms. Shivangi Chandra as Cheief Legal Advisor by BOD</a></li>
+                <li><a href="Document/Outcome_of_BM_02122020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 02.12.2020</a></li>
+                <li><a href="Document/SE_Intimation_Notice_of_BM_02122020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 02.12.2020</a></li>
+                <li><a href="Document/Intimation_Change_Constitution_Committee_12112020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Change in Constitution of Committee w.e.f. 12.11.2020</a></li>
+                <li><a href="Document/Intimation_Appointment_Rajeev_Ranjan_Sarkari_AdditionalDirector_12112020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation_for Appointment of Mr. Rajeev Ranjan Sarkari as an Additional Director (NED-ID) w.e.f 12.11.2020</a></li>
+                <li><a href="Document/Outcome_of_BM_12112020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 12.11.2020</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_30092020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th Sep, 2020</a></li>
+                <li><a href="Document/IntimationforClosureofTradingWindowdated05102020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 05.10.2020</a></li>
+                <li><a href="Document/Clarification_StockExchange_26082020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Clarification to Stock Exchange dated 26.08.2020</a></li>
+                <li><a href="Document/Intimation_Resignation_Shivangi_Chandra_Director_13082020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation of Ms. Shivangi Chandra as Director w.e.f. 13.08.2020</a></li>
+                <li><a href="Document/Intimation_Resignation_Akhilesh_Kumar_Maheswari_ID_04082020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation of Mr. Akhilesh Kumar Maheswari from the post of ID w.e.f. 04.08.2020</a></li>
+                <li><a href="Document/Intimation_appointment_Secretraial_Auditor_conducting_Secretarial_Audit2021.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for the appointment of Secretraial Auditor for conducting Secretarial Audit for FY 2020-21</a></li>
+                <li><a href="Document/Outcome_of_BM_31072020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 31.07.2020</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_30062020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th June, 2020</a></li>
+                <li><a href="Document/PriorIntimation_Board_Meeting_31072020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 31.07.2020</a></li>
+                <li><a href="Document/Intimation_Resignation_Rajat_Tooley_Senior_Vice_President_01042020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation Mr. Rajat Tooley (Senior Vice President) w.e.f. 01.04.2020</a></li>
+                <li><a href="Document/Intimation_relation_Covid_impact.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation in relation to Covid impact</a></li>
+                <li><a href="Document/Intimation_Non_Applicability_RPT_filing_under_23(9)_LODR.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Non Applicability RPT filing under 23(9) of LODR</a></li>
+                <li><a href="Document/Intimation_Non_Applicability_Annal_Secretarial_Compliance_Report_24A.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Non Applicability of Annal Secretarial Compliance Report 24A</a></li>
+                <li><a href="Document/Intimation_Non_Applicability_Reg_15_LODR.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Non Applicability Reg 15 of LODR</a></li>
+                <li><a href="Document/Disclosure_under_Reg_31_SEBI_SAST_Regulations_2011.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure under Reg 31 of SEBI (SAST) Regulations 2011</a></li>
+                <li><a href="Document/Disclosure_under_Reg_30_SEBI_SAST_Regulations_2011.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure under Reg 30 of SEBI (SAST) Regulations 2011</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_31032020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 31st March, 2020</a></li>
+                <li><a href="Document/Intimation_Closure_Trading_Window_01042020.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 01.04.2020</a></li>
+            </ul>
+        </div>
+
+        <button class="accordion">FY 2019-20</button>
+        <div class="panel">
+            <ul>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_31122019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 31st Dec, 2019</a></li>
+                <li><a href="Document/Intimation_Board_Comments_Non_Compalince_Regulation_34_LODR.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation regarding Board Comments on Non Compalince of Regulation 34 of LODR</a></li>
+                <li><a href="Document/Outcome_of_BM_13112019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 13.11.2019</a></li>
+                <li><a href="Document/Intimation_Legal_Cases_Status_Company.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Legal Cases Status of the Company</a></li>
+                <li><a href="Document/SE_Intimation_Board_Meeting_13112019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 13.11.2019</a></li>
+                <li><a href="Document/Intimation_Closure_Trading_Window_21102019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 21.10.2019</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_30092019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th Sep, 2019</a></li>
+                <li><a href="Document/Intimation_Voting_Results_Scrutinizer_Report_22nd_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Voting Results and Scrutinizer Report of 22nd AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Clarification_Proceedings_22nd_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Clarification on Proceedings of 22nd AGM</a></li>
+                <li><a href="Document/Intimation_Appointment_DSSrivastava_ID_23022019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of D. S. Srivastava as an ID w.e.f. 23.02.2019</a></li>
+                <li><a href="Document/Intimation_reappointment_VikramGandhi_23022019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for reappointment of Mr. Vikram Gandhi w.e.f. 23.02.2019</a></li>
+                <li><a href="Document/Intimation_ReAppointment_Refixation_remuneration_Amit Verma_WTD.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Re-Appointment & Re-fixation of remuneration of Mrs. Amita Verma as WTD</a></li>
+                <li><a href="Document/Intimation_appointment_CSVerma_retire_rotation.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for appointment of Mr. CS Verma who liable to retire by rotation</a></li>
+                <li><a href="Document/Intimation_Proceeding_22ndAGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Proceeding of 22nd AGM of the Company.pdf</a></li>
+                <li><a href="Document/Intimation_Notice_22ndAGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Notice of 22nd AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Appointment_AmitaVerma_WTD_30082019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of Mrs. Amita Verma as WTD w.e.f. 30.08.2019</a></li>
+                <li><a href="Document/Intimation_Appointment_InternalAuditor.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of Internal Auditor for a period of 5 years</a></li>
+                <li><a href="Document/Outcome_of_BM_30082019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 30.08.2019</a></li>
+                <li><a href="Document/SE_Intimation_Notice_of_BM_30082019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 30.08.2019</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_30062019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 30th June, 2019</a></li>
+                <li><a href="Document/Intimation_NSE_Reply_regarding_Financial_Results.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for NSE Reply regarding Financial Results</a></li>
+                <li><a href="Document/Intimation_Non_Applicability_RPT_filing_23(9)_LODR.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Non Applicability RPT filing under 23(9) of LODR</a></li>
+                <li><a href="Document/Intimation_Code_Conduct_SEBI_PIT_2015.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Code of Conduct under SEBI (PIT) Regulations, 2015</a></li>
+                <li><a href="Document/Intimation_Non_Applicability_Annal_Secretarial_Compliance_Report_24A.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Non Applicability of Annal Secretarial Compliance Report 24A</a></li>
+                <li><a href="Document/Intimation_appointment_Secretraial_Auditor_conducting_Secretarial_Audit_201920.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for the appointment of Secretraial Auditor for conducting Secretarial Audit for FY 2019-20</a></li>
+                <li><a href="Document/Outcome_of_BM_30052019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 30.05.2019</a></li>
+                <li><a href="Document/Notice_of_Postponment_of_Board_Meeting_30052019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Postponment of Board Meeting dated 30.05.2019</a></li>
+                <li><a href="Document/Prior_Intimation_Board_Meeting_29052019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Prior Intimation of Board Meeting dated 29.05.2019</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_74(5)_SEBI_DP_Regulations_2018_31032019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 74(5) of the SEBI (DP) Regulations, 2018 for the quarter ended 31st March, 2019</a></li>
+                <li><a href="Document/Intimation_Non_applicability_SEBI_Circular_fund_raised_Large_Corporates.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Non-applicability of SEBI Circular for fund raised by Large Corporates</a></li>
+                <li><a href="Document/Disclosure_under_Reg30(1)_30(2)_SEBI_SAST_Regulations_2011.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure under Reg30(1) and 30(2) of SEBI (SAST) Regulations 2011</a></li>
+                <li><a href="Document/Disclosure_under_Reg30_SEBI_SAST_Regulations_2011.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure under Reg 30 of SEBI (SAST) Regulations 2011</a></li>
+                <li><a href="Document/SE_Intimation_Closure_of_Trading_Window_05042019.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 05.04.2019</a></li>
+            </ul>
+        </div>
+        <button class="accordion">FY 2018-19</button>
+        <div class="panel">
+            <ul>
+                <li><a href="Document/Intimation_Utilization_of_IPO_Proceeds.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Utilization of IPO Proceeds</a></li>
+                <li><a href="Document/Outcomes_of_BM_14112018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 14.11.2018</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_55A_30092018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 55A of the SEBI (DP) Regulations, 2018 for the quarter ended 30th Sep, 2018</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_40(9)_SEBI_LODR_Regulations_2015_halfyear_30092018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 40(9) of SEBI – LODR Regulations, 2015 for the half-year ended 30th Sep, 2018</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_7(3)_SEBI_LODR_Regulations_2015_halfyear_30092018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation. 7(3) of SEBI – LODR Regulations, 2015 for the half-year ended 30th Sep, 2018</a></li>
+                <li><a href="Document/Intimation_Annual_Report_FY_2017_2018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Annual Report for the FY 2017-2018</a></li>
+                <li><a href="Document/Intimation_Voting_Results_Scrutinizer_Report_21stAGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Voting Results and Scrutinizer Report of 21st AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Reappointment_Vikram_Gandhi_Independent_Director.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Reappointment of Mr. Vikram Gandhi as an Independent Director</a></li>
+                <li><a href="Document/Intimation_Reappointment_Shivangi_Chandra_Director.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Reappointment of Ms. Shivangi Chandra as Director</a></li>
+                <li><a href="Document/Intimation_Proceeding_21st_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Proceeding of 21st AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Newspaper_Advt_Notice_21st_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Newspaper Advt. of Notice of 21st AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Book_Closure_purpose_21st_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Book Closure for the purpose of 21st AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Evoting_purpose_21st_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Evoting for the purpose of 21st AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Notice_21st_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Notice of 21st AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Outcome_Board_Meeting_25082018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 25.08.2018</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_55A_SEBI_DP_Regulations_2018_quarter_30062018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 55A of the SEBI (DP) Regulations, 2018 for the quarter ended 30th June, 2018</a></li>
+                <li><a href="Document/Intimation_Statement_of_Deviation_or_Variation_31032018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Statement of Deviation or Variation 31.03.2018</a></li>
+                <li><a href="Document/Intimation_Appointment_Internal_Auditor_FY2018_19.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of Internal Auditor for the FY 2018-19</a></li>
+                <li><a href="Document/OutcomeofBoardMeeting_30052018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 30.05.2018</a></li>
+                <li><a href="Document/Intimation_Closure_Trading_Window_22052018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 22.05.2018</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_55A_SEBI_DP_Regulations_2018_quarter_31032018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 55A of the SEBI (DP) Regulations, 2018 for the quarter ended 31st March, 2018</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_40(9)_SEBI_LODR_Regulations_2015_halfyear_31032018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation. 40(9) of SEBI – LODR Regulations, 2015 for the half-year ended 31st March, 2018</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_7(3)_SEBI_LODR_Regulations_2015_halfyear31032018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation. 7(3) of SEBI – LODR Regulations, 2015 for the half-year ended 31st March, 2018</a></li>
+                <li><a href="Document/Disclosure_Reg_30_SEBI_SAST_Regulations_2011.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Disclosure under Reg. 30 of SEBI (SAST) Regulations 2011</a></li>
+            </ul>
+        </div>
+         <button class="accordion">FY 2017-18</button>
+        <div class="panel">
+            <ul>
+                <li><a href="Document/Intimation_Reappointment_Vikram_Gandhi_Independent_Director_24032018.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Re-appointment of Vikram Gandhi as Independent Director dated 24.03.2018</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_55A_SEBI_DP_Regulations_2018_quarter_31122017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 55A of the SEBI (DP) Regulations, 2018 for the quarter ended 31st Dec, 2017</a></li>
+                <li><a href="Document/Intimation_Utilization_of_IPO_Proceeds.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Utilization of IPO Proceeds</a></li>
+                <li><a href="Document/OutcomeofBoardMeeting_14112017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 14.11.2017</a></li>
+                <li><a href="Document/Intimation_Closure_Trading_Window_04112017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window 04.11.2017</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_55A_30092017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 55A of the SEBI (DP) Regulations, 2018 for the quarter ended 30th Sep, 2017</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_7(3)_SEBI_LODR_Regulations_2015_halfyear_30092017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation 7(3) of SEBI – LODR Regulations, 2015 for the half-year ended 30th Sep, 2017</a></li>
+                <li><a href="Document/Intimation_Certificate_Regulation_40(9)_SEBI_LODR_Regulations_2015_halfyear_30092017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Certificate under Regulation. 40(9) of SEBI – LODR Regulations, 2015 for the half-year ended 30th Sep, 2017</a></li>
+                <li><a href="Document/Intimation_Statment_Deviation_Variation.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Statment of Deviation or Variation</a></li>
+                <li><a href="Document/Intimation_Annual_Report_FY_2016_17.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Annual Report for the FY 2016-17</a></li>
+                <li><a href="Document/Intimation_Voting_Results_Scrutinizer_Report_20th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Voting Results and Scrutinizer Report of 20th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_appointment_Vikram_Gandhi_20th_AGM_26092017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for appointment of Mr. Vikram Gandhi in the 20th AGM dated 26.09.2017</a></li>
+                <li><a href="Document/Intimation_ReAppointment_Amita_Verma_Director_20th_AGM_26092017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Re-Appointment of Mrs. Amita Verma as Director in the 20th AGM dated 26.09.2017</a></li>
+                <li><a href="Document/Intimation_Proceeding_20th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Proceeding of 20th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Newspaper_Advt_Notice_20th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Newspaper Advt. of Notice of 20th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Evoting_purpose_20th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Evoting for the purpose of 20th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Book_Closure_purpose_20th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation of Book Closure for the purpose of 20th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Notice_20th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Notice of 20th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Appointment_Internal_Auditor.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Appointment of Internal Auditor</a></li>
+                <li><a href="Document/Intimation_Recommendation_Statutory_Auditor_20th_AGM.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Recommendation of Statutory Auditor in 20th AGM of the Company</a></li>
+                <li><a href="Document/Intimation_Resignation_Auditor_28082017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Resignation of Auditor dated 28.08.2017</a></li>
+                <li><a href="Document/Intimation_Outcome_BoardMeeting_28082017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Outcome of Board Meeting dated 28.08.2017</a></li>
+                <li><a href="Document/Intimation_Closure_Trading_Window_19082017.pdf" target="_blank" style="color: #f17100; font-weight: bold;">Intimation for Closure of Trading Window dated 19.08.2017</a></li>
+            </ul>
+        </div><br>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+    </div></p>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+  
+      
+    
+    <!--End Project Financial Results-->
+    
+    <!--Main Footer-->
+    <footer class="main-footer">
+		<div class="auto-container">
+        	<!--Widgets Section-->
+            <div class="widgets-section">
+            	<div class="row clearfix">
+                	
+                    <!--big column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                                <div class="footer-widget logo-widget">
+                                    <div class="logo">
+                                    	<a href="{% url 'index' %}"><img src="{% static 'images/ace-logo2.png'%}" height="850px" width="200px" alt="" /></a>
+                                    </div>
+                                    <div class="text">Collaboratively administrate em powered markets via plug and play networks. Dynamically procrastinate B2C users after installed.</div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                	<h2>Quick Links</h2>
+                                    <div class="widget-content">
+										<ul class="list">
+                                        	<li><a href="{% url 'index' %}">Home</a></li>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Testimonials</a></li>
+                                            <li><a href="#">Request Call Back</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--big column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                	<h2>Services</h2>
+                                    <div class="widget-content">
+										<ul class="list">
+                                        	<li><a href="#">Mechanical Engineering</a></li>
+                                            <li><a href="#">Agricultural Processing</a></li>
+                                            <li><a href="#">Petrolium & Gas</a></li>
+                                            <li><a href="#">Material Engineering</a></li>
+                                            <li><a href="#">Power & Engergy</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget info-widget">
+                                	<h2>Get In Touch</h2>
+                                    <div class="widget-content">
+                                    	<div class="number">+91 - 9650 339 995</div>
+                                        <div class="text">B-13, DSIDC Complex,
+                                            Patparganj Industrial Area, Delhi - 110 092</div>
+                                        <ul class="social-icon-one">
+                                        	<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <div class="copyright">&copy; Copyright  <a href="#">Ace Integrated Solutions Ltd..</a> 2023. All right reserved.</div>
+                    </div>
+                    <div class="pull-right">
+                        <div class="created">Created by Kristellar Aerospace Pvt. Ltd.</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </footer>
+    
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+
+<!-- Color Palate / Color Switcher -->
+<div class="color-palate">
+    <div class="color-trigger">
+        <i class="fa fa-gear"></i>
+    </div>
+    <div class="color-palate-head">
+        <h6>Choose Your Color</h6>
+    </div>
+    <div class="various-color clearfix">
+        <div class="colors-list">
+            <span class="palate default-color active" data-theme-file="css/color-themes/default-theme.css"></span>
+            <span class="palate teal-color" data-theme-file="css/color-themes/teal-theme.css"></span>
+            <span class="palate green-color" data-theme-file="css/color-themes/green-theme.css"></span>
+            <span class="palate aqua-color" data-theme-file="css/color-themes/aqua-theme.css"></span>
+            <span class="palate blue-color" data-theme-file="css/color-themes/blue-theme.css"></span>
+            <span class="palate orange-color" data-theme-file="css/color-themes/orange-theme.css"></span>
+            <span class="palate olive-color" data-theme-file="css/color-themes/olive-theme.css"></span>
+            <span class="palate red-color" data-theme-file="css/color-themes/red-theme.css"></span>
+        </div>
+    </div>
+
+    <div class="palate-foo">
+        <span>You can easily change and switch the colors.</span>
+    </div>
+
+</div>
+<!-- /.End Of Color Palate -->
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+
+<script src="{% static 'js/owl.js' %}"></script>
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+<!--Color Switcher-->
+<script src="{% static 'js/color-settings.js' %}"></script>
+</body>
+
+</html>

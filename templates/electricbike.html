@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <title>ACE | Electric Bikes</title>
     <!-- Stylesheets -->
-    <!-- Add Django template tag for loading static files -->
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
@@ -97,7 +96,7 @@
                                         </li>
                                         <li class="dropdown"><a href="#">Investors</a>
                                             <ul>
-                                                <li><a href="{%url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
+                                                <li><a href="{% url 'Disclosures-under-Regulation'%}">Disclosures under Regulation 46 of the LODR</a></li>
                                                 <li class="dropdown"><a href="#">Financials & Fillings</a> 
                                                     <ul>
                                                         <li><a href="{% url 'financial-result'%}">Financial Results</a></li>
@@ -221,10 +220,10 @@
                                                         <li><a href="{% url 'stock-exchange' %}">Stock Exchange Intimation</a></li>
                                                         <li><a href="{% url 'agmegm' %}">AGM/EGM</a></li>
                                                         <li><a href="{% url 'postal-ballot' %}">Postal Ballot</a></li>
-                                                        <li><a href="{%url 'annual-return' %}">Annual Return</a></li>
+                                                        <li><a href="{% url 'annual-return' %}">Annual Return</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="{%url 'policies' %}">Policies & Codes</a></li>
+                                                <li><a href="{% url 'policies' %}">Policies & Codes</a></li>
                                                 <li><a href="{% url 'Investor-Grievances-Cell' %}">Investor Grievance Cell</a></li>
                                                 <li><a href="{% url 'ipo' %}">IPO</a></li>
                                             </ul>
@@ -260,7 +259,7 @@
             <div class="auto-container">
                 <div class="inner-container clearfix">
                     <ul class="bread-crumb pull-left">
-                        <li><a href="{%url 'index'%} " style="font-size: 20px;"><b>Home</b></a></li>
+                        <li><a href="{% url 'index'%} " style="font-size: 20px;"><b>Home</b></a></li>
 
                     <li style="font-size: 17px;">E-Mobility</li>
                     <li style="font-size: 17px;">Bikes</li>
@@ -378,7 +377,7 @@ Embark on a new era of cycling where sophistication meets the sheer joy of pedal
                                 	<h2>Quick Links</h2>
                                     <div class="widget-content">
 										<ul class="list">
-                                        	<li><a href="{ %url 'index' %}">Home</a></li>
+                                        	<li><a href="{% url 'index' %}">Home</a></li>
                                             <li><a href="#">About Us</a></li>
                                             <li><a href="#">Testimonials</a></li>
                                             <li><a href="#">Request Call Back</a></li>

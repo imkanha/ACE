@@ -121,9 +121,9 @@
                                                     <li><a href="{% url 'annual-return' %}">Annual Return</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="policies.html">Policies & Codes</a></li>
-                                            <li><a href="Investor-Grievances-Cell.html">Investor Grievance Cell</a></li>
-                                            <li><a href="ipo.html">IPO</a></li>
+                                            <li><a href="{% url 'policies' %}">Policies & Codes</a></li>
+                                            <li><a href="{% url 'Investor-Grievances-Cell' %}">Investor Grievance Cell</a></li>
+                                            <li><a href="{% url 'ipo' %}">IPO</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{% url 'contact' %}">Contact us</a></li>
@@ -167,29 +167,29 @@
                                     	<ul>
                                             <li class="dropdown"><a href="#">E-Mobility</a>
                                                 <ul>
-                                                    <li><a href="electricbike.html">Electric Bikes</a></li>
-                                                    <li><a href="electricboat.html">Electric Boats</a></li>
-                                                    <li><a href="drone.html">Drones</a></li>
+                                                    <li><a href="{% url 'electricbike' %}">Electric Bikes</a></li>
+                                                    <li><a href="{% url 'electricboat' %}">Electric Boats</a></li>
+                                                    <li><a href="{% url 'drone' %}">Drones</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Information technology</a>
                                                 <ul>
-                                                    <li><a href="cybersecurity.html">Cyber Security</a></li>
-                                                    <li><a href="supplychain.html">Supply Chain Management</a></li>
-                                                    <li><a href="exammanagement.html">Exam Management</a></li>
+                                                    <li><a href="{% url 'cybersecurity' %}">Cyber Security</a></li>
+                                                    <li><a href="{% url 'supplychain' %}">Supply Chain Management</a></li>
+                                                    <li><a href="{% url 'exammanagement' %}">Exam Management</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="assessment.html">Assessment</a></li>
-                                            <li><a href="globaleducation.html">Global Education</a></li>
-                                            <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li>
+                                            <li><a href="{% url 'assessment' %}">Assessment</a></li>
+                                            <li><a href="{% url 'globaleducation' %}">Global Education</a></li>
+                                            <li><a href="{% url 'realestate' %}">Real Estate & Infrastructure Management</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">Company</a>
                                     	<ul>
-                                            <li><a href="company-history.html">Overview</a></li>
-                                            <li><a href="groupcompany.html">Group Companies</a></li>
-                                            <li><a href="client.html">Clientale</a></li>
-                                            <li><a href="socialinitiatives.html">Social Initiatives</a></li>
+                                            <li><a href="{% url 'company-history' %}">Overview</a></li>
+                                            <li><a href="{% url 'groupcompany' %}">Group Companies</a></li>
+                                            <li><a href="{% url 'client' %}">Clientale</a></li>
+                                            <li><a href="{% url 'socialinitiatives' %}">Social Initiatives</a></li>
                                         </ul>
                                     </li>
                                     
@@ -198,17 +198,17 @@
                                             <li><a href="Disclosures-under-Regulation.html">Disclosures under Regulation 46 of the LODR</a></li>
                                             <li class="dropdown"><a href="#">Financials & Fillings</a>
                                                 <ul>
-                                                    <li><a href="financial-result.html">Financial Results</a></li>
-                                                    <li><a href="financial-statement.html">Financial Statements</a></li>
-                                                    <li><a href="annual-report.html">Annual Reports</a></li>
-                                                    <li><a href="otherpublication.html">Other Publications</a></li>
+                                                    <li><a href="{% url 'financial-result' %}">Financial Results</a></li>
+                                                    <li><a href="{% url 'financial-statement' %}">Financial Statements</a></li>
+                                                    <li><a href="{% url 'annual-report' %}">Annual Reports</a></li>
+                                                    <li><a href="{% url 'otherpublication' %}">Other Publications</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Board Information</a>
                                                 <ul>
-                                                    <li><a href="boardofdirector.html">Board of Directors</a></li>
-                                                    <li><a href="Composition-of-various-Committees-of-BOD.html">Composition of various Committees of BOD</a></li>
-                                                    <li><a href="board-meeting.html">Board Meeting </a></li>
+                                                    <li><a href="{% url 'boardofdirector' %}">Board of Directors</a></li>
+                                                    <li><a href="{% url 'Composition-of-various-Committees-of-BOD' %}">Composition of various Committees of BOD</a></li>
+                                                    <li><a href="{% url 'board-meeting' %}">Board Meeting </a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Compliances</a>
@@ -438,10 +438,10 @@
                 <div class="services-block col-md-4 col-sm-6 col-xs-12">
                 	<div class="inner-box">
                     	<div class="image">
-                        	<a href="exammanagement.html"><img src="{% static 'images/img/software.jpeg' %}" alt="" /></a>
+                        	<a href="{% url 'exammanagement' %}"><img src="{% static 'images/img/software.jpeg' %}" alt="" /></a>
                         </div>
                         <div class="lower-content">
-                        	<h3><a href="exammanagement.html">Software Development</a></h3>
+                        	<h3><a href="{% url 'exammanagement' %}">Software Development</a></h3>
                         </div>
                     </div>
                 </div>
@@ -453,7 +453,7 @@
                         	<a href="cybersecurity.html"><img src="{% static 'images/img/Cybersecurity.jpeg' %}" alt="" /></a>
                         </div>
                         <div class="lower-content">
-                        	<h3><a href="cybersecurity.html">Cyber security</a></h3>
+                        	<h3><a href="{% url 'cybersecurity' %}">Cyber security</a></h3>
                         </div>
                     </div>
                 </div>
@@ -465,7 +465,7 @@
                         	<a href="supplychain.html"><img src="{% static 'images/img/SCM.jpeg' %}" alt="" /></a>
                         </div>
                         <div class="lower-content">
-                        	<h3><a href="supplychain.html">Supply Chain Management</a></h3>
+                        	<h3><a href="{% url 'supplychain' %}">Supply Chain Management</a></h3>
                         </div>
                     </div>
                 </div>
@@ -487,13 +487,13 @@
                 <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
                     <div class="inner-box">
                         <div class="image">
-                            <a href="coachingforemployment.html"><img src="{% static 'images/img/coaching.png' %}" alt="" /></a>
+                            <a href="{% url 'coachingforemployment' %}"><img src="{% static 'images/img/coaching.png' %}" alt="" /></a>
                         </div>
                         <div class="lower-content">
                             <div class="lower-box">
-                                <h3><a href="coachingforemployment.html">Coaching for Employment</a></h3>
+                                <h3><a href="{% url 'coachingforemployment' %}">Coaching for Employment</a></h3>
                                 <div class="text">.........</div>
-                                <a href="coachingforemployment.html" class="theme-btn btn-style-four">Read More</a>
+                                <a href="{% url 'coachingforemployment' %}" class="theme-btn btn-style-four">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -503,13 +503,13 @@
                 <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
                     <div class="inner-box">
                         <div class="image">
-                            <a href="assessment.html"><img src="{% static 'images/img/Assessment1.jpeg' %}" alt="" /></a>
+                            <a href="{% url 'assessment' %}"><img src="{% static 'images/img/Assessment1.jpeg' %}" alt="" /></a>
                         </div>
                         <div class="lower-content">
                             <div class="lower-box">
-                                <h3><a href="assessment.html">Assessment </a></h3>
+                                <h3><a href="{% url 'assessment' %}">Assessment </a></h3>
                                 <div class="text">Ace Edupoint aims and focuses to bring revolutionary transformational catalyst, to guide students and career aspirants.....</div>
-                                <a href="assessment.html" class="theme-btn btn-style-four">Read More</a>
+                                <a href="{% url 'assessment' %}" class="theme-btn btn-style-four">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -531,14 +531,14 @@
                 <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
                     <div class="inner-box">
                         <div class="image">
-                            <a href="ev.html"><img src="{% static 'images/img/EV.jpeg' %}" alt="" /></a>
+                            <a href="{% url 'ev' %}"><img src="{% static 'images/img/EV.jpeg' %}" alt="" /></a>
                         </div>
                         <div class="lower-content">
                             <div class="lower-box">
-                                <h3><a href="ev.html">Electric Vehicle</a></h3>
+                                <h3><a href="{% url 'ev' %}">Electric Vehicle</a></h3>
                                 <div class="text">Before the COVID-19 pandemic shook up the automotive industry – along 
                                     with every other industry – electric vehicles were.......</div>
-                                <a href="ev.html" class="theme-btn btn-style-four">Read More</a>
+                                <a href="{% url 'ev' %}" class="theme-btn btn-style-four">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -548,14 +548,14 @@
                 <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
                     <div class="inner-box">
                         <div class="image">
-                            <a href="drone.html"><img src="{% static 'images/img/drone.png' %}" alt="" /></a>
+                            <a href="{% url 'drone' %}"><img src="{% static 'images/img/drone.png' %}" alt="" /></a>
                         </div>
                         <div class="lower-content">
                             <div class="lower-box">
-                                <h3><a href="drone.html">DRONE</a></h3>
+                                <h3><a href="{% url 'drone' %}">DRONE</a></h3>
                                 <div class="text">.......
                                     </div>
-                                <a href="drone.html" class="theme-btn btn-style-four">Read More</a>
+                                <a href="{% url 'drone' %}" class="theme-btn btn-style-four">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -732,7 +732,7 @@
                             <div class="footer-column col-md-7 col-sm-6 col-xs-12">
                                 <div class="footer-widget logo-widget">
 									<div class="logo">
-                                    	<a href="index.html"><img src="{% static 'images/ace-logo2.png' %}" height="850px" width="200px" alt="" /></a>
+                                    	<a href="{% url 'index' %}"><img src="{% static 'images/ace-logo2.png' %}" height="850px" width="200px" alt="" /></a>
                                     </div>
                                     <div class="text">Collaboratively administrate em powered markets via plug and play networks. Dynamically procrastinate B2C users after installed.</div>
                                 </div>
@@ -744,11 +744,11 @@
                                 	<h2>Quick Links</h2>
                                     <div class="widget-content">
 										<ul class="list">
-                                        	<li><a href="index.html">Home</a></li>
+                                        	<li><a href="{% url 'index' %}">Home</a></li>
                                             <li><a href="#about_page">About Us</a></li>
                                             <li><a href="#testimonial_section">Testimonials</a></li>
                                             <li><a href="#">Request Call Back</a></li>
-                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
                                         </ul>
                                     </div>
                                 </div>

@@ -1,0 +1,825 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>ACE | Global Education</title>
+<!-- Stylesheets -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+    <!--Color Switcher Mockup-->
+    <link href="{% static 'css/color-switcher-design.css'%}" rel="stylesheet">
+
+    <!--Color Themes-->
+    <link id="theme-color-file" href="{% static 'css/color-themes/default-theme.css'%}" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+ 	
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+ 	
+
+    <!-- Main Header-->
+    <header class="main-header">
+
+
+            <!-- Main Box -->
+            <div class="main-box">
+                <div class="auto-container">
+                    <div class="outer-container clearfix">
+                        <!--Logo Box-->
+                        <div class="logo-box">
+                            <div class="logo"><a href="{% url 'index'%}"><img src="{% static 'images/ace-logo2.png' %}" alt=""></a></div>
+                        </div>
+
+                        <!--Nav Outer-->
+                        <div class="nav-outer clearfix">
+
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="{% url 'index' %}">Home</a></li>
+                                        <li class="dropdown"><a href="#">Business Solutions</a>
+                                            <ul>
+                                                <li class="dropdown"><a href="#">E-Mobility</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'electricbike'%}">Electric Bikes</a></li>
+                                                        <li><a href="{% url 'electricboat'%}">Electric Boats</a></li>
+                                                        <li><a href="{% url 'drone'%}">Drones</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">Information technology</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'cybersecurity'%}">Cyber Security</a></li>
+                                                        <li><a href="{% url 'supplychain'%}">Supply Chain Management</a></li>
+                                                        <li><a href="{% url 'exammanagement'%}">Exam Management</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'assessment'%}">Assessment</a></li>
+                                                <li><a href="{% url 'globaleducation'%}">Global Education</a></li>
+                                                <!-- <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li> -->
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="#">Company</a>
+                                            <ul>
+                                                <li><a href="{% url 'company-history'%}">Overview</a></li>
+                                                <!-- <li><a href="groupcompany.html">Group Companies</a></li> --> 
+                                                <li><a href="{% url 'client'%}">Clientale</a></li>
+                                                <li><a href="{% url 'socialinitiatives'%}">Social Initiatives</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Investors</a>
+                                            <ul>
+                                                <li><a href="{% url 'Disclosures-under-Regulation'%}">Disclosures under Regulation 46 of the LODR</a></li>
+                                                <li class="dropdown"><a href="#">Financials & Fillings</a> 
+                                                    <ul>
+                                                        <li><a href="{% url 'financial-result'%}">Financial Results</a></li>
+                                                        <li><a href="{% url 'financial-statement'%}">Financial Statements</a></li>
+                                                        <li><a href="{% url 'annual-report'%}">Annual Reports</a></li>
+                                                        <li><a href="{% url 'otherpublication'%}">Other Publications</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">Board Information</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'boardofdirector'%}">Board of Directors</a></li>
+                                                        <li><a href="{% url 'Disclosures-under-Regulation'%}">Disclosures under Regulation 46 of the LODR</a></li>
+                                                        <li><a href="{% url 'board-meeting'%}">Board Meeting </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">Compliances</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'shareholding-pattern'%}">Shareholding Pattern</a></li>
+                                                        <li><a href="{% url 'corporate-governance'%}">Corporate Governance Report</a></li>
+                                                        <li><a href="{% url 'stock-exchange'%}">Stock Exchange Intimation</a></li>
+                                                        <li><a href="{% url 'agmegm'%}">AGM/EGM</a></li>
+                                                        <li><a href="{% url 'postal-ballot'%}">Postal Ballot</a></li>
+                                                        <li><a href="{% url 'annual-return'%}">Annual Return</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'policies'%}">Policies & Codes</a></li>
+                                                <li><a href="{% url 'Investor-Grievances-Cell'%}">Investor Grievance Cell</a></li>
+                                                <li><a href="{% url 'ipo'%}">IPO</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'contact'%}">Contact us</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+
+                        </div>
+                        <!--Nav Outer End-->
+
+                    </div>
+                </div>
+            </div>
+
+            <!--Sticky Header-->
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="sticky-inner-container clearfix">
+                        <!--Logo-->
+                        <div class="logo pull-left">
+                            <a href="{% url 'index'%}" class="img-responsive">
+                                <img src="{% static 'images/ace-logo2.png'%}" height="880px" width="150px" alt="" title=""></a>
+                        </div>
+
+                        <!--Right Col-->
+                        <div class="right-col pull-right">
+                            <!-- Main Menu -->
+                            <nav class="main-menu">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="{% url 'index'%}">Home</a></li>
+                                        <li class="dropdown"><a href="#">Business Solutions</a>
+                                            <ul>
+                                                <li class="dropdown"><a href="#">E-Mobility</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'electricbike'%}">Electric Bikes</a></li>
+                                                        <li><a href="{% url 'electricboat'%}">Electric Boats</a></li>
+                                                        <li><a href="{% url 'drone'%}">Drones</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">Information technology</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'cybersecurity'%}">Cyber Security</a></li>
+                                                        <li><a href="{% url 'supplychain'%}">Supply Chain Management</a></li>
+                                                        <li><a href="{% url 'exammanagement'%}">Exam Management</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'assessment'%}">Assessment</a></li>
+                                                <li><a href="{% url 'globaleducation'%}">Global Education</a></li>
+                                                <!-- <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li> -->
+                                            </ul>
+                                        </li>
+
+                                        <li class="dropdown"><a href="#">Company</a>
+                                            <ul>
+                                                <li><a href="{% url 'company-history'%}">Overview</a></li>
+                                                <!-- <li><a href="groupcompany.html">Group Companies</a></li> -->
+                                                <li><a href="{% url 'client'%}">Clientale</a></li>
+                                                <li><a href="{% url 'socialinitiatives'%}">Social Initiatives</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown"><a href="#">Investors</a>
+                                            <ul>
+                                                <li><a href="{% url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
+                                                <!-- <li class="dropdown"><a href="#">Financials & Fillings</a> -->
+                                                    <ul>
+                                                        <li><a href="{% url 'financial-result' %}">Financial Results</a></li>
+                                                        <li><a href="{% url 'financial-statement' %}">Financial Statements</a></li>
+                                                        <li><a href="{% url 'annual-report' %}">Annual Reports</a></li>
+                                                        <li><a href="{% url 'otherpublication' %}">Other Publications</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">Board Information</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'boardofdirector' %}">Board of Directors</a></li>
+                                                        <li><a href="{% url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
+                                                        <li><a href="{% url 'board-meeting' %}">Board Meeting </a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="dropdown"><a href="#">Compliances</a>
+                                                    <ul>
+                                                        <li><a href="{% url 'shareholding-pattern' %}">Shareholding Pattern</a></li>
+                                                        <li><a href="{% url 'corporate-governance' %}">Corporate Governance Report</a></li>
+                                                        <li><a href="{% url 'stock-exchange' %}">Stock Exchange Intimation</a></li>
+                                                        <li><a href="{% url 'agmegm' %}">AGM/EGM</a></li>
+                                                        <li><a href="{% url 'postal-ballot' %}">Postal Ballot</a></li>
+                                                        <li><a href="{% url 'annual-return' %}">Annual Return</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="{% url 'policies' %}">Policies & Codes</a></li>
+                                                <li><a href="{% url 'Investor-Grievances-Cell' %}">Investor Grievance Cell</a></li>
+                                                <li><a href="{% url 'ipo' %}">IPO</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="{% url 'contact'%}">Contact us</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <!-- Main Menu End-->
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--End Sticky Header-->
+
+        </header>
+    <!--End Main Header -->
+    
+    <!--Page Title-->
+    <section class="page-title" style="background-image:url('{% static 'images/background/subpage.jpg' %}')";>
+        <div class="auto-container">
+            <h1>Global Education</h1>
+        </div>
+        
+    </section>
+    <!--End Page Title-->
+    
+    <!--Page Info-->
+    <div class="page-info">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <ul class="bread-crumb pull-left">
+                    <li><a href= "{% url 'index' %} " style="font-size: 20px;"><b>Home</b></a></li>
+
+                    <li style="font-size: 17px;"><b>Business Solutions</b></li>
+                    <li style="font-size: 17px;"><b>Global Education</b></li>
+                    
+                </ul>
+                <!--<div class="text pull-right">Certified Company ISO 9001-2008</div>-->
+            </div>
+        </div>
+    </div>
+    <!--End Page Info-->
+    
+    <!--Project Detail Section-->
+    <section class="project-detail-section">
+    	
+        <!--Description Section-->
+        <div class="description-section">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="about-section-three">
+                        <div class="sec-title">
+                            <h2>Overview</h2>
+                        </div>
+                        <div class="row clearfix">
+                            <!--Content Column-->
+                            <div class="content-column col-md-8 col-sm-12 col-xs-12">
+                                <div class="inner-column">
+                                    <div class="text">
+                                        <p>Studying abroad is a dream for many students. While some time back it seemed impossible, but now the world is open to international students all over again with universities and business schools welcoming students with open arms with world class facilities, most affordable fee structure and future ready model. </p>
+                                        <p><b>Why study abroad?</b></p>
+                                        <ul class="list-style-three">
+                                            <li>Global exposure of business skills</li>
+                                            <li>World-class education followed by better Employability</li>
+                                            <li>Specialization of courses and business streams</li>
+                                            <li>Better career opportunities</li>
+                                            <li>Experience different cultures</li>
+                                            <li>Build Network worldwide</li>
+                                            <li>Become independent and self-reliant</li>
+                                            <li>Experience of a lifetime to get quantum jump in career</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Image Column-->
+                            <div class="image-column col-md-4 col-sm-12 col-xs-12">
+                                <div class="image">
+                                    <img src=" {% static 'images/resource/81-Study-in-Germany.jpg' %}" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <!--We Did Section-->
+        <div class="we-did-section">
+            <div class="auto-container">
+            	<div class="row clearfix">
+                	<!--Image Column-->
+                    <div class="image-column col-md-4 col-sm-12 col-xs-12">
+                    	<div class="image">
+                        	<img src="{% static 'images/resource/26-studygermany.jpg' %}" alt="" />
+                        </div>
+                    </div>
+                    <!--Content Column-->
+                    <div class="content-column col-md-8 col-sm-12 col-xs-12">
+                    	<div class="inner-column">
+                        	<div class="sec-title">
+                                <h2>Wings to Germany</h2>
+                            
+                            <div class="text">
+                                <p>One wonders as to what can be key criteria for critical decision making towards shaping up one’s career Goals. Quality of Education assumes foremost position, followed by other parameters i.e. Global scale, Employability, Cost factors, Economic drivers. German Education System scores enviable marks in all key parameters setting it at par with most of American and European education models. Success becomes imminent at German Universities and B-Schools offer unparallel standards, high-class regimen, cutting-edge tech-facilities, permissive atmosphere of specialized learning and industry lineage for giving robust growth in career as rewarding experience. </p>
+                                <p><b>Advantages</b></p>
+                                    <ul class="list-style-three">
+                                        <li>Top notch faculty to impart complex topics of Business and Engineering</li>
+                                        <li>Fully Government funded Infrastructure at Public Universities</li>
+                                        <li>Evolving course curriculum aligned with Industry specially in manufacturing</li>
+                                        <li>Lower Cost for studies while Compared with most of B-Schools</li>
+                                        <li>Resilient Business support and cohesive Society in Germany</li>
+                                        <li>High degree of job opportunities</li>
+                                    </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!--End We Did Section-->
+        
+        <!--Result Section-->
+        <section class="result-section">
+        	<div class="auto-container">
+            	<div class="sec-title">
+                    <h2>Why ACE Global Education</h2>
+                
+                <div class="text">
+                    <p>As a Partner in your mission to succeed for study at Germany, Ace Global Education offers variety of key services to assist a student not only in admission process but also in guiding in Visa and stay facilities post getting admitted</p>
+                    <p><b>Pre-Admission</b></p>
+                        <ul class="list-style-three">
+                            <li>Starting from identification of programs to all stages of support functions, Ace global education steers you through its professionally managed services</li>
+                            <li>Ace shows right-fit path to its students, with utmost care and establishes strong bridge to cross with ease and succeed in endeavor of career building</li>
+                            <li>We not only provide core services, i.e. CV, LOR, Letter of motivation, fee-waivers etc but strengthen your knowledge through GRE/ GMAT / IELTS coaching services.</li>
+                        </ul><br>
+                    <p><b>Post-Admission</b></p>
+                        <ul class="list-style-three">
+                            <li>Guidance to get Visa application submission</li>
+                            <li>Ace acts as true partner, post admission stage and helps student to navigate ways for economical boarding and lodging in foreign land.</li>
+                            <li>Our patrons experience least bottleneck through well defined processes developed by its overseas team.</li>
+                        </ul>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!--End Result Section-->
+
+        <!--We Did Section-->
+        <div class="we-did-section">
+            <div class="auto-container">
+            	<div class="sec-title">
+                    <h2>Study & Work Destination</h2><br><br>
+                
+                <div class="text">
+                    <h3>Study @ Germany</h3><br>
+                    <p>Undoubtedly today it is well known fact that German education is standing at highest maturity levels.</p>
+                        <ul class="list-style-three">
+                            <li>Top 5 German B schools belong to global top 40 institutions based of varied academic performance data.</li>
+                            <li>Variety of advanced learning program at courses offer flexibility of choice</li>
+                            <li>Work during study is well supported in Germany</li>
+                            <li>Post-degree, a candidate gets work permit as per stream of qualification</li>
+                        </ul><br>
+                    <h3>Work @ Germany</h3><br>
+                    <p>Germany stands at number 4th on world economy and it needs skilled management resources to support core functions at Industry for example : Production, Engineering, Logistics, Marketing, Strategy, Planning and many other business line of functions.</p>
+                            <ul class="list-style-three">
+                                <li>Government of Germany has formulated fast track employment categories visa program to attract talents and service facilities.</li>
+                                <li>There are direct intake and campus hiring by Leading MNC s to fill-up growing resource needs for running their business.</li>
+                                <li>Core domains with specialized skills are in high demand for professional positioning at lucrative compensations.</li>
+                            </ul><br>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!--End We Did Section-->
+
+        <section class="result-section">
+        	<div class="auto-container">
+            	<div class="sec-title">
+                    <h2>Growth Stride</h2>
+                
+                <div class="text">
+                    <h3>International Intake Story</h3><br>
+                        <ul class="list-style-three">
+                            <li>In year 2022, the total number of international students studying in Germany was 440,564.</li>
+                            <li>Of the total 440,564 foreign students, 349,438 are international students, and 91,126 are resident international students.</li>
+                            <li>Indian students comprise of 8% among International students</li>
+                            <li>International student enrolment has increased by 29.4% from 2015 to 2022</li>
+                        </ul><br>
+                    <h3>International Intake Story</h3><br>
+                    <div class="image" style="position: relative;">
+                        <img src="{% static 'images/resource/GrowthChartGermany.jpg' %}" height="800px" width="800px" alt="" />
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 5px solid rgba(0, 0, 0, 0.5);"></div>
+                        <p style="font-style: italic; text-align: center; margin-top: 10px; position: relative; z-index: 1;">A growth chart showing the economic development of Germany over time.</p>
+                    </div>
+                    
+                    
+
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="we-did-section">
+            <div class="auto-container">
+            	<div class="sec-title">
+                <div class="text">
+                    <section class="section-lg">
+                        <div class="container">
+                            <div class="sec-title">
+                                <h2>Services</h2>
+                            </div>
+                          <div class="row">
+                                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="home-text">
+                                <p>
+                                  <div class="container">
+                      
+                                  <style>
+                                      .services .icon-box {
+                                          margin-bottom: 40px;
+                                          min-height: 230px;
+                                          text-align: center;
+                                          border: 1px solid #ebebeb;
+                                          padding-top: 15px;
+                                          transition: all ease-in-out 0.3s;
+                                          background: #fff;
+                                      }
+                      
+                                          .services .icon-box .icon {
+                                              margin: 0 auto;
+                                              width: 64px;
+                                              height: 64px;
+                                              background: #ffc451;
+                                              border-radius: 4px;
+                                              display: flex;
+                                              align-items: center;
+                                              justify-content: center;
+                                              margin-bottom: 20px;
+                                              transition: 0.3s;
+                                          }
+                      
+                                              .services .icon-box .icon i {
+                                                  color: #337ab7;
+                                                  font-size: 28px;
+                                                  transition: ease-in-out 0.3s;
+                                              }
+                      
+                                          .services .icon-box a:hover {
+                                              text-decoration: none;
+                                          }
+                      
+                                          .services .icon-box:hover {
+                                              border-color: #fff;
+                                              box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+                                              transform: translateY(-10px);
+                                          }
+                                  </style>
+                                  <section id="services" class="services">
+                                      <div class="row row-0">
+                                          <div class="col-md-3 col-0">
+                                              <div class="icon-box">
+                                                  <a>
+                                                      <div class="icon">
+                                                          <i class="fa fa-comments fa-lg"></i>
+                                                      </div>
+                                                  </a>
+                                                  <h5>One-on-One Consulting</h5>
+                                                  <p style="font: 400 12px/1.8 Open Sans, sans-serif">Not sure where to start! Talk to our expert counselors for a detailed profile analysis.</p>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-3 col-1">
+                                              <div class="icon-box">
+                                                  <a>
+                                                      <div class="icon">
+                                                          <i class="fa fa-university fa-lg"></i>
+                                                      </div>
+                                                  </a>
+                                                  <h5>University & Course Shortlisting</h5>
+                                                  <p style="font: 400 12px/1.8 Open Sans, sans-serif">Pre-selecting courses based on your interest and eligibility. Preparing a list of eligible courses along with the  admission criteria, deadline and university application process.</p>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-3 col-2">
+                                              <div class="icon-box">
+                                                  <a>
+                                                      <div class="icon">
+                                                          <i class="fa fa-clipboard fa-lg"></i>
+                                                      </div>
+                                                  </a>
+                                                  <h5>CV</h5>
+                                                  <p style="font: 400 12px/1.8 Open Sans, sans-serif">Sharing European CV format. Providing tips for developing an exceptional CV. Reviewing and guiding you through the CV creation process.</p>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-3 col-3">
+                                              <div class="icon-box">
+                                                  <a>
+                                                      <div class="icon">
+                                                          <i class="fa fa-edit fa-lg"></i>
+                                                      </div>
+                                                  </a>
+                                                  <h5>SOP/ Motivation Letter</h5>
+                                                  <p style="font: 400 12px/1.8 Open Sans, sans-serif">Sharing European Motivation letter format. Explaining expectation from Motivation letter. Reviewing and guiding you through the Motivation letter writing process.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row row-1">
+                                          <div class="col-md-3 col-0">
+                                              <div class="icon-box">
+                                                  <a>
+                                                      <div class="icon">
+                                                          <i class="fa fa-file-text fa-lg"></i>
+                                                      </div>
+                                                  </a>
+                                                  <h5>Letter of Recommendation</h5>
+                                                  <p style="font: 400 12px/1.8 Open Sans, sans-serif">Providing you the format for letter of recommendation. Guiding you through the process of receiving a value-add LOR.</p>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-3 col-1">
+                                              <div class="icon-box">
+                                                  <a>
+                                                      <div class="icon">
+                                                          <i class="fa fa-clipboard fa-lg"></i>
+                                                      </div>
+                                                  </a>
+                                                  <h5>Essays & Personal Statement Brainstorming</h5>
+                                                  <p style="font: 400 12px/1.8 Open Sans, sans-serif">Brainstorm with our experts to come up with exceptional Essay and Personal Statement</p>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-3 col-2">
+                                              <div class="icon-box">
+                                                  <a>
+                                                      <div class="icon">
+                                                          <i class="fa fa-phone fa-lg"></i>
+                                                      </div>
+                                                  </a>
+                                                  <h5>Interview Preparation</h5>
+                                                  <p style="font: 400 12px/1.8 Open Sans, sans-serif">Providing you tips for interview process. Helping you practice with mock interviews</p>
+                                              </div>
+                                          </div>
+                                          <div class="col-md-3 col-3">
+                                              <div class="icon-box">
+                                                  <a>
+                                                      <div class="icon">
+                                                          <i class="fa fa-th"></i>
+                                                      </div>
+                                                  </a>
+                                                  <h5>Scholarship & Financial Aid Advice</h5>
+                                                  <p style="font: 400 12px/1.8 Open Sans, sans-serif">Guiding you through different scholarships and financial aids available in Germany to support your study and stay.</p>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </section>
+                    
+                    </section>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="result-section">
+        	<div class="auto-container">
+            	<div class="sec-title">
+                    <h2>Contact Us</h2>
+                
+                <div class="text">
+                    <section id="contact" class="contact">
+                        <style>
+                            .contact .info-box {
+                                color: #444444;
+                                text-align: center;
+                                box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
+                                padding: 20px 0 30px 0;
+                            }
+        
+                                .contact .info-box i {
+                                    font-size: 32px;
+                                    color: #ffc451;
+                                    border-radius: 50%;
+                                    padding: 8px;
+                                    border: 2px dotted #ffc451;
+                                    /*background-color: #ffc451;*/
+                                }
+        
+                                .contact .info-box h3 {
+                                    font-size: 20px;
+                                    color: #777777;
+                                    font-weight: 700;
+                                    margin: 10px 0;
+                                }
+        
+                                .contact .info-box p {
+                                    padding: 0;
+                                    line-height: 24px;
+                                    font-size: 14px;
+                                    margin-bottom: 0;
+                                    text-align: center;
+                                }
+                        </style>
+                        <div class="row row-0">
+                            <div class="col-md-3">
+                                <div class="info-box">
+                                    <i class="fa fa-phone"></i>
+                                    <h3>Call Us</h3>
+                                    <p>
+                                        011 49537949
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="info-box">
+                                    <i class="fa fa-whatsapp"></i>
+                                    <h3>Chat Us</h3>
+                                    <p>
+                                        +91 965 030 8017
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="info-box">
+                                    <i class="fa fa-envelope"></i>
+                                    <h3>Email Us</h3>
+                                    <p>
+                                        info@aceintegrated.com
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="info-box">
+                                    <i class="fa fa-clock-o"></i>
+                                    <h3>Open Hours</h3>
+                                    <p>
+                                        Monday - Friday<br>
+                                        10:00 AM - 06:00 PM (IST)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        
+    <!--End Project Detail Section-->
+    
+    <!--Main Footer-->
+    <footer class="main-footer">
+		<div class="auto-container">
+        	<!--Widgets Section-->
+            <div class="widgets-section">
+            	<div class="row clearfix">
+                	
+                    <!--big column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-7 col-sm-6 col-xs-12">
+                                <div class="footer-widget logo-widget">
+									<div class="logo">
+                                    	<a href= "{% url 'index' %} "><img src="{% static 'images/ace-logo2.png' %}" height="850px" width="200px" alt="" /></a>
+                                    </div>
+                                    <div class="text">Collaboratively administrate em powered markets via plug and play networks. Dynamically procrastinate B2C users after installed.</div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-5 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                	<h2>Quick Links</h2>
+                                    <div class="widget-content">
+										<ul class="list">
+                                        	<li><a href= "{% url 'index' %} ">Home</a></li>
+                                            <li><a href="#">About Us</a></li>
+                                            <li><a href="#">Testimonials</a></li>
+                                            <li><a href="#">Request Call Back</a></li>
+                                            <li><a href="#">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--big column-->
+                    <div class="big-column col-md-6 col-sm-12 col-xs-12">
+                        <div class="row clearfix">
+                        
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget links-widget">
+                                	<h2>Services</h2>
+                                    <div class="widget-content">
+										<ul class="list">
+                                        	<li><a href="#">Mechanical Engineering</a></li>
+                                            <li><a href="#">Agricultural Processing</a></li>
+                                            <li><a href="#">Petrolium & Gas</a></li>
+                                            <li><a href="#">Material Engineering</a></li>
+                                            <li><a href="#">Power & Engergy</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--Footer Column-->
+                            <div class="footer-column col-md-6 col-sm-6 col-xs-12">
+                                <div class="footer-widget info-widget">
+                                	<h2>Get In Touch</h2>
+                                    <div class="widget-content">
+                                    	<div class="number">+91 - 9650 339 995</div>
+                                        <div class="text">B-13, DSIDC Complex,
+                                            Patparganj Industrial Area, Delhi - 110 092</div>
+                                        <ul class="social-icon-one">
+                                        	<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                            <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!--Footer Bottom-->
+            <div class="footer-bottom">
+                <div class="clearfix">
+                    <div class="pull-left">
+                        <div class="copyright">&copy; Copyright  <a href="#">Ace Integrated Solutions Ltd..</a> 2023. All right reserved.</div>
+                    </div>
+                    <div class="pull-right">
+                        <div class="created">Created by Kristellar Aerospace Pvt. Ltd.</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </footer>
+    
+</div>
+<!--End pagewrapper-->
+
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon fa fa-angle-double-up"></span></div>
+
+<!-- Color Palate / Color Switcher -->
+<div class="color-palate">
+    <div class="color-trigger">
+        <i class="fa fa-gear"></i>
+    </div>
+    <div class="color-palate-head">
+        <h6>Choose Your Color</h6>
+    </div>
+    <div class="various-color clearfix">
+        <div class="colors-list">
+            <span class="palate default-color active" data-theme-file="css/color-themes/default-theme.css"></span>
+            <span class="palate teal-color" data-theme-file="css/color-themes/teal-theme.css"></span>
+            <span class="palate green-color" data-theme-file="css/color-themes/green-theme.css"></span>
+            <span class="palate aqua-color" data-theme-file="css/color-themes/aqua-theme.css"></span>
+            <span class="palate blue-color" data-theme-file="css/color-themes/blue-theme.css"></span>
+            <span class="palate orange-color" data-theme-file="css/color-themes/orange-theme.css"></span>
+            <span class="palate olive-color" data-theme-file="css/color-themes/olive-theme.css"></span>
+            <span class="palate red-color" data-theme-file="css/color-themes/red-theme.css"></span>
+        </div>
+    </div>
+
+    <div class="palate-foo">
+        <span>You can easily change and switch the colors.</span>
+    </div>
+
+</div>
+<!-- /.End Of Color Palate -->
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.fancybox.js' %}"></script>
+
+<script src="{% static 'js/owl.js' %}"></script>
+<script src="{% static 'js/wow.js' %}"></script>
+<script src="{% static 'js/appear.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+
+<!--Color Switcher-->
+<script src="{% static 'js/color-settings.js' %}"></script>
+</body>
+
+</html>

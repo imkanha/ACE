@@ -4,24 +4,24 @@
 
 <head>
 <meta charset="utf-8">
-<title>ACE | Contact</title>
+<title>ACE | Social Initiatives</title>
 <!-- Stylesheets -->
 <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
-<link href="{% static 'css/style.css' %}" rel="stylesheet">
-<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
 
-<!--Color Switcher Mockup-->
-<link href="{% static 'css/color-switcher-design.css' %}" rel="stylesheet">
+    <!--Color Switcher Mockup-->
+    <link href="{% static 'css/color-switcher-design.css'%}" rel="stylesheet">
 
-<!--Color Themes-->
-<link id="theme-color-file" href="{% static 'css/color-themes/default-theme.css' %}" rel="stylesheet">
+    <!--Color Themes-->
+    <link id="theme-color-file" href="{% static 'css/color-themes/default-theme.css'%}" rel="stylesheet">
 
-<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-<link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
-<!-- Responsive -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <link rel="icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 
@@ -34,118 +34,117 @@
  	
     <!-- Main Header-->
     <header class="main-header">
-    
-    	
-        
+
+
         <!-- Main Box -->
-    	<div class="main-box">
-        	<div class="auto-container">
-            	<div class="outer-container clearfix">
+        <div class="main-box">
+            <div class="auto-container">
+                <div class="outer-container clearfix">
                     <!--Logo Box-->
                     <div class="logo-box">
-                        <div class="logo"><a href="{% url 'index' %}"><img src="{% static 'images/ace-logo2.png' %}" alt=""></a></div>
+                        <div class="logo"><a href="{% url 'index'%}"><img src="{% static 'images/ace-logo2.png' %}" alt=""></a></div>
                     </div>
-                    
+
                     <!--Nav Outer-->
                     <div class="nav-outer clearfix">
-                    
+
                         <!-- Main Menu -->
                         <nav class="main-menu">
                             <div class="navbar-header">
-                                <!-- Toggle Button -->    	
+                                <!-- Toggle Button -->
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
                             </div>
-                            
+
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
                                     <li><a href="{% url 'index' %}">Home</a></li>
                                     <li class="dropdown"><a href="#">Business Solutions</a>
-                                    	<ul>
+                                        <ul>
                                             <li class="dropdown"><a href="#">E-Mobility</a>
                                                 <ul>
-                                                    <li><a href="{% url 'electricbike' %}">Electric Bikes</a></li>
-                                                    <li><a href="{% url 'electricboat' %}">Electric Boats</a></li>
-                                                    <li><a href="{% url 'drone' %}">Drones</a></li>
+                                                    <li><a href="{% url 'electricbike'%}">Electric Bikes</a></li>
+                                                    <li><a href="{% url 'electricboat'%}">Electric Boats</a></li>
+                                                    <li><a href="{% url 'drone'%}">Drones</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Information technology</a>
                                                 <ul>
-                                                    <li><a href="{% url 'cybersecurity' %}">Cyber Security</a></li>
-                                                    <li><a href="{% url 'supplychain' %}">Supply Chain Management</a></li>
-                                                    <li><a href="{% url 'exammanagement' %}">Exam Management</a></li>
+                                                    <li><a href="{% url 'cybersecurity'%}">Cyber Security</a></li>
+                                                    <li><a href="{% url 'supplychain'%}">Supply Chain Management</a></li>
+                                                    <li><a href="{% url 'exammanagement'%}">Exam Management</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="assessment.html">Assessment</a></li>
-
-                                            <li><a href="{% url 'globaleducation' %}">Global Education</a></li>
-                                            <li><a href="{% url 'realestate' %}">Real Estate & Infrastructure Management</a></li>
+                                            <li><a href="{% url 'assessment'%}">Assessment</a></li>
+                                            <li><a href="{% url 'globaleducation'%}">Global Education</a></li>
+                                            <!-- <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li> -->
                                         </ul>
                                     </li>
-                                    
+
                                     <li class="dropdown"><a href="#">Company</a>
-                                    	<ul>
-                                            <li><a href="{% url 'company-history' %}">Overview</a></li>
-                                            <li><a href="{% url 'groupcompany' %}">Group Companies</a></li>
-                                            <li><a href="{% url 'client' %}">Clientale</a></li>
-                                            <li><a href="{% url 'socialinitiatives' %}">Social Initiatives</a></li>
+                                        <ul>
+                                            <li><a href="{% url 'company-history'%}">Overview</a></li>
+                                            <!-- <li><a href="groupcompany.html">Group Companies</a></li> --> 
+                                            <li><a href="{% url 'client'%}">Clientale</a></li>
+                                            <li><a href="{% url 'socialinitiatives'%}">Social Initiatives</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">Investors</a>
-                                    	<ul>
-                                            <li><a href="Disclosures-under-Regulation.html">Disclosures under Regulation 46 of the LODR</a></li>
-                                            <li class="dropdown"><a href="#">Financials & Fillings</a>
+                                        <ul>
+                                            <li><a href="{% url 'Disclosures-under-Regulation'%}">Disclosures under Regulation 46 of the LODR</a></li>
+                                            <li class="dropdown"><a href="#">Financials & Fillings</a> 
                                                 <ul>
-                                                    <li><a href="{% url 'financial-result' %}">Financial Results</a></li>
-                                                    <li><a href="{% url 'financial-statement' %}">Financial Statements</a></li>
-                                                    <li><a href="{% url 'annual-report' %}">Annual Reports</a></li>
-                                                    <li><a href="{% url 'otherpublication' %}">Other Publications</a></li>
+                                                    <li><a href="{% url 'financial-result'%}">Financial Results</a></li>
+                                                    <li><a href="{% url 'financial-statement'%}">Financial Statements</a></li>
+                                                    <li><a href="{% url 'annual-report'%}">Annual Reports</a></li>
+                                                    <li><a href="{% url 'otherpublication'%}">Other Publications</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Board Information</a>
                                                 <ul>
-                                                    <li><a href="{% url 'boardofdirector' %}">Board of Directors</a></li>
-                                                    <li><a href="{% url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
-                                                    <li><a href="{% url 'board-meeting' %}">Board Meeting </a></li>
+                                                    <li><a href="{% url 'boardofdirector'%}">Board of Directors</a></li>
+                                                    <li><a href="{% url 'Disclosures-under-Regulation'%}">Disclosures under Regulation 46 of the LODR</a></li>
+                                                    <li><a href="{% url 'board-meeting'%}">Board Meeting </a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Compliances</a>
                                                 <ul>
-                                                    <li><a href="{% url 'shareholding-pattern' %}">Shareholding Pattern</a></li>
-                                                    <li><a href="{% url 'corporate-governance' %}">Corporate Governance Report</a></li>
-                                                    <li><a href="{% url 'stock-exchange' %}">Stock Exchange Intimation</a></li>
-                                                    <li><a href="{% url 'agmegm' %}">AGM/EGM</a></li>
-                                                    <li><a href="{% url 'postal-ballot' %}">Postal Ballot</a></li>
-                                                    <li><a href="{% url 'annual-return' %}">Annual Return</a></li>
+                                                    <li><a href="{% url 'shareholding-pattern'%}">Shareholding Pattern</a></li>
+                                                    <li><a href="{% url 'corporate-governance'%}">Corporate Governance Report</a></li>
+                                                    <li><a href="{% url 'stock-exchange'%}">Stock Exchange Intimation</a></li>
+                                                    <li><a href="{% url 'agmegm'%}">AGM/EGM</a></li>
+                                                    <li><a href="{% url 'postal-ballot'%}">Postal Ballot</a></li>
+                                                    <li><a href="{% url 'annual-return'%}">Annual Return</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="{% url 'policies'%}">Policies & Codes</a></li>
-                                            <li><a href="{% url 'Investor-Grievances-Cell' %}">Investor Grievance Cell</a></li>
-                                            <li><a href="{% url 'ipo' %}">IPO</a></li>
+                                            <li><a href="{% url 'Investor-Grievances-Cell'%}">Investor Grievance Cell</a></li>
+                                            <li><a href="{% url 'ipo'%}">IPO</a></li>
                                         </ul>
                                     </li>
-                                    <li class="current"><a href="{% url 'contact' %}">Contact us</a></li>
-                                 </ul>
+                                    <li><a href="{% url 'contact'%}">Contact us</a></li>
+                                </ul>
                             </div>
                         </nav>
-                        
+
                     </div>
                     <!--Nav Outer End-->
-                    
-            	</div>    
+
+                </div>
             </div>
         </div>
-    
-    	<!--Sticky Header-->
+
+        <!--Sticky Header-->
         <div class="sticky-header">
-        	<div class="auto-container">
+            <div class="auto-container">
                 <div class="sticky-inner-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index.html" class="img-responsive"><img src="{% static 'images/ace-logo2.png' %}" height="880px" width="150px" alt="" title=""></a>
+                        <a href="{% url 'index'%}" class="img-responsive">
+                            <img src="{% static 'images/ace-logo2.png'%}" height="880px" width="150px" alt="" title=""></a>
                     </div>
 
                     <!--Right Col-->
@@ -153,52 +152,51 @@
                         <!-- Main Menu -->
                         <nav class="main-menu">
                             <div class="navbar-header">
-                                <!-- Toggle Button -->    	
+                                <!-- Toggle Button -->
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
                             </div>
-                            
+
                             <div class="navbar-collapse collapse clearfix">
                                 <ul class="navigation clearfix">
-                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'index'%}">Home</a></li>
                                     <li class="dropdown"><a href="#">Business Solutions</a>
-                                    	<ul>
+                                        <ul>
                                             <li class="dropdown"><a href="#">E-Mobility</a>
                                                 <ul>
-                                                    <li><a href="{% url 'electricbike' %}">Electric Bikes</a></li>
-                                                    <li><a href="{% url 'electricboat' %}">Electric Boats</a></li>
-                                                    <li><a href="{% url 'drone' %}">Drones</a></li>
+                                                    <li><a href="{% url 'electricbike'%}">Electric Bikes</a></li>
+                                                    <li><a href="{% url 'electricboat'%}">Electric Boats</a></li>
+                                                    <li><a href="{% url 'drone'%}">Drones</a></li>
                                                 </ul>
                                             </li>
                                             <li class="dropdown"><a href="#">Information technology</a>
                                                 <ul>
-                                                    <li><a href="{% url 'cybersecurity' %}">Cyber Security</a></li>
-                                                    <li><a href="{% url 'supplychain' %}">Supply Chain Management</a></li>
-                                                    <li><a href="{% url 'exammanagement' %}">Exam Management</a></li>
+                                                    <li><a href="{% url 'cybersecurity'%}">Cyber Security</a></li>
+                                                    <li><a href="{% url 'supplychain'%}">Supply Chain Management</a></li>
+                                                    <li><a href="{% url 'exammanagement'%}">Exam Management</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="{% url 'assessment' %}">Assessment</a></li>
-
-                                            <li><a href="{% url 'globaleducation' %}">Global Education</a></li>
-                                            <li><a href="{% url 'realestate' %}">Real Estate & Infrastructure Management</a></li>
+                                            <li><a href="{% url 'assessment'%}">Assessment</a></li>
+                                            <li><a href="{% url 'globaleducation'%}">Global Education</a></li>
+                                            <!-- <li><a href="realestate.html">Real Estate & Infrastructure Management</a></li> -->
                                         </ul>
                                     </li>
-                                    
+
                                     <li class="dropdown"><a href="#">Company</a>
-                                    	<ul>
-                                            <li><a href="{% url 'company-history' %}">Overview</a></li>
-                                            <li><a href="{% url 'groupcompany' %}">Group Companies</a></li>
-                                            <li><a href="{% url 'client' %}">Clientale</a></li>
-                                            <li><a href="{% url 'socialinitiatives' %}">Social Initiatives</a></li>
+                                        <ul>
+                                            <li><a href="{% url 'company-history'%}">Overview</a></li>
+                                            <!-- <li><a href="groupcompany.html">Group Companies</a></li> -->
+                                            <li><a href="{% url 'client'%}">Clientale</a></li>
+                                            <li><a href="{% url 'socialinitiatives'%}">Social Initiatives</a></li>
                                         </ul>
                                     </li>
                                     <li class="dropdown"><a href="#">Investors</a>
-                                    	<ul>
+                                        <ul>
                                             <li><a href="{% url 'Disclosures-under-Regulation' %}">Disclosures under Regulation 46 of the LODR</a></li>
-                                            <li class="dropdown"><a href="#">Financials & Fillings</a>
+                                            <!-- <li class="dropdown"><a href="#">Financials & Fillings</a> -->
                                                 <ul>
                                                     <li><a href="{% url 'financial-result' %}">Financial Results</a></li>
                                                     <li><a href="{% url 'financial-statement' %}">Financial Statements</a></li>
@@ -228,28 +226,27 @@
                                             <li><a href="{% url 'ipo' %}">IPO</a></li>
                                         </ul>
                                     </li>
-                                    <li class="current"><a href="{% url 'contact' %}">Contact us</a></li>
-                                 </ul>
+                                    <li><a href="{% url 'contact'%}">Contact us</a></li>
+                                </ul>
                             </div>
                         </nav>
                         <!-- Main Menu End-->
-                        
-                       
+
 
                     </div>
-                    
+
                 </div>
             </div>
         </div>
         <!--End Sticky Header-->
-    
+
     </header>
     <!--End Main Header -->
     
     <!--Page Title-->
-    <section class="page-title" style="background-image:url({% static 'images/background/subpage.jpg' %});">
+    <section class="page-title" style="background-image:url('{% static 'images/background/subpage.jpg' %}')";>
         <div class="auto-container">
-            <h1>Contact us</h1>
+            <h1>Social Initiatives</h1>
         </div>
         
     </section>
@@ -260,135 +257,67 @@
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <ul class="bread-crumb pull-left">
-                    <li><a href="{% url 'index' %}">Home</a></li>
-                    <li>Contact us</li>
+                    <li><a href="{% url 'index'%} " style="font-size: 20px;"><b>Home</b></a></li>
+
+                    <li style="font-size: 17px;"><b>Company</b></li>
+                    <li style="font-size: 17px;"><b>Social Initiatives</b></li>
+                    
                 </ul>
-                <!--<div class="text pull-right">Certified Company ISO 9001-2008</div>-->
+                
             </div>
         </div>
     </div>
     <!--End Page Info-->
     
-    <style>
-        .google-maps {
-          position: relative;
-          padding-bottom: 25%; 
-          height: 0;
-          overflow: hidden;
-        }
-        .google-maps iframe {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100% !important;
-          height: 100% !important;
-        }
-      </style>
-      
-      <div class="google-maps">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.6205236859696!2d77.30785737503399!3d28.64113328369089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4a3e4000001%3A0xd4b51953079fca0b!2sAce%20Integrated%20Solutions%20Limited!5e0!3m2!1sen!2sin!4v1700886660067!5m2!1sen!2sin" 
-          width="200"
-          height="50"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
-    
-    <!--Contact Section-->
-    <section class="contact-section">
+    <!--Project FullWidth Screen-->
+    <div class="blog-page-section">
     	<div class="auto-container">
-        	<div class="contact-title">
-            	<h2>Drop us message</h2>
-                <div class="text">Please use this form to send us a message.</div>
-            </div>
         	<div class="row clearfix">
-            	
-                <!--Form Column-->
-                <div class="form-column col-md-8 col-sm-12 col-xs-12">
-                	<div class="inner-column">
-                    	<!--Contact Form-->
-                        <div class="contact-form">
-                            <form method="post" id= "contact" action="{% url 'contact' %}">
-                                {% csrf_token %}
-                                <div class="row clearfix">
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id="firstName" name="firstName" value="" placeholder="First name" required>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id = "lastName" name="lastName" value="" placeholder="Last name" required>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id = "emailId" name="emailId" value="" placeholder="Email" required>
-                                    </div>
-
-                                    <div class="form-group col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" id = "message" name="message" value="" placeholder="message" required>
-                                    </div>
-
-                                    
-                                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
-                                        <button id= "submit" type="submit" class="theme-btn btn-style-one">Submit now</button>
-                                    </div>                                        
-                                </div>
-                            </form>
-                            <script>
-                                document.getElementById("submit").addEventListener("submit", function(event) {
-                                  event.preventDefault(); // Prevents the default form submission
-                                
-                                  // Capture input values
-                                  var firstName = document.getElementById("firstName").value;
-                                  var lastName = document.getElementById("lastName").value;
-                                  var emailId = document.getElementById("emailId").value;
-                                  var message = document.getElementById("message").value;
-                                
-                                  // You can now send these values to the backend using AJAX or Fetch API
-                                  // Example using Fetch API:
-                                  fetch('http://127.0.0.1:8000/contact/', {
-                                    method: 'POST',
-                                    headers: {
-                                      'Content-Type': 'application/json',
-                                    },
-                                    body: JSON.stringify({ firstName: firstName, lastName: lastName, emailId: emailId, message: message }),
-                                  })
-                                  .then(response => response.json())
-                                  .then(data => {
-                                    // Handle the response from the backend
-                                    console.log('Success:', data);
-                                  })
-                                  .catch((error) => {
-                                    console.error('Error:', error);
-                                  });
-                                });
-                                </script>
+            	<div class="sec-title">
+                    <h2 style="left: 50px;">Social Initiatives</h2>
+                </div>
+                <!--News Block Three-->
+                <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="#"><img src="{% static 'images/resource/news-3.jpg' %}" alt="" /></a>
                         </div>
-                        <!--End Contact Form-->
+                        <div class="lower-content">
+                            <div class="lower-box">
+                                <h3><a href="#">My India Industrial Promotion Foundation</a></h3>
+                                <div class="text">My India Industrial Promotion Foundation, (MIIPF) is an ambitious organization which promote 
+                                    social welfare activities intended for the general welfare of the public and trying to end poverty, 
+                                    exploitation and innumerable forms violence meted out to the poor and trying to create a just 
+                                    world for marginalized and people living on the fringes of the society.</div>
+                                <a href="#" class="theme-btn btn-style-four">Click Here</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <!--Info Column-->
-                <div class="info-column col-md-4 col-sm-12 col-xs-12">
-                	<div class="inner-column">
-                    	<ul>
-                        	<li><span>Address:</span>B-13, DSIDC Complex,
-                                Patparganj Industrial Area, Delhi - 110 092</li>
-                            <li><span>E-mail address (CMD): </span>info@aceintegrated.com</li>
-                            <li><span>Business Enquiry : </span>marketing@aceintegrated.com</li>
-                            <li><span>General Information :</span>info@aceintegrated.com</li>
-                            <li><span>phone:</span>+91 - 9650 339 995</li>
-                        </ul>
+                <!--News Block Three-->
+                <div class="news-block-three col-md-6 col-sm-12 col-xs-12">
+                    <div class="inner-box">
+                        <div class="image">
+                            <a href="#"><img src="{% static 'images/resource/news-4.jpg' %}" alt="" /></a>
+                        </div>
+                        <div class="lower-content">
+                            <div class="lower-box">
+                                <h3><a href="#">MyAce India Education Promotion Foundation</a></h3>
+                                <div class="text">MyAce India Education Promotion Foundation is an organization which provides help and all support 
+                                    facilities to the needy people and to promote education and also help needy scholars through 
+                                    scholarships and to select candidates on all India basis through selection.<br><br>
+                                    </div>
+                                    <a href="https://myaceindia.in/" class="theme-btn btn-style-four" target="_blank">Click Here</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </div>
-    </section>
-    <!--End Contact Section-->
+    </div>
+    <!--End Project FullWidth Screen-->
 
-    
     
     <!--Main Footer-->
     <footer class="main-footer">
@@ -405,7 +334,7 @@
                             <div class="footer-column col-md-7 col-sm-6 col-xs-12">
                                 <div class="footer-widget logo-widget">
                                     <div class="logo">
-                                    	<a href="index.html"><img src="{% static 'images/ace-logo2.png' %}" height="850px" width="200px" alt="" /></a>
+                                    	<a href="{% url 'index'%} " ><img src="{% static 'images/ace-logo2.png' %}" height="850px" width="200px" alt="" /></a>
                                     </div>
                                     <div class="text">Collaboratively administrate em powered markets via plug and play networks. Dynamically procrastinate B2C users after installed.</div>
                                 </div>
@@ -417,7 +346,7 @@
                                 	<h2>Quick Links</h2>
                                     <div class="widget-content">
 										<ul class="list">
-                                        	<li><a href="index.html">Home</a></li>
+                                        	<li><a href="{% url 'index'%} " >Home</a></li>
                                             <li><a href="#">About Us</a></li>
                                             <li><a href="#">Testimonials</a></li>
                                             <li><a href="#">Request Call Back</a></li>
@@ -506,14 +435,14 @@
     </div>
     <div class="various-color clearfix">
         <div class="colors-list">
-            <span class="palate default-color active" data-theme-file="{% static 'css/color-themes/default-theme.css' %}"></span>
-            <span class="palate teal-color" data-theme-file="{% static 'css/color-themes/teal-theme.css' %}"></span>
-            <span class="palate green-color" data-theme-file="{% static 'css/color-themes/green-theme.css' %}"></span>
-            <span class="palate aqua-color" data-theme-file="{% static 'css/color-themes/aqua-theme.css' %}"></span>
-            <span class="palate blue-color" data-theme-file="{% static 'css/color-themes/blue-theme.css' %}"></span>
-            <span class="palate orange-color" data-theme-file="{% static 'css/color-themes/orange-theme.css' %}"></span>
-            <span class="palate olive-color" data-theme-file="{% static 'css/color-themes/olive-theme.css' %}"></span>
-            <span class="palate red-color" data-theme-file="{% static 'css/color-themes/red-theme.css' %}"></span>
+            <span class="palate default-color active" data-theme-file="css/color-themes/default-theme.css"></span>
+            <span class="palate teal-color" data-theme-file="css/color-themes/teal-theme.css"></span>
+            <span class="palate green-color" data-theme-file="css/color-themes/green-theme.css"></span>
+            <span class="palate aqua-color" data-theme-file="css/color-themes/aqua-theme.css"></span>
+            <span class="palate blue-color" data-theme-file="css/color-themes/blue-theme.css"></span>
+            <span class="palate orange-color" data-theme-file="css/color-themes/orange-theme.css"></span>
+            <span class="palate olive-color" data-theme-file="css/color-themes/olive-theme.css"></span>
+            <span class="palate red-color" data-theme-file="css/color-themes/red-theme.css"></span>
         </div>
     </div>
 
@@ -531,9 +460,7 @@
 <script src="{% static 'js/owl.js' %}"></script>
 <script src="{% static 'js/wow.js' %}"></script>
 <script src="{% static 'js/appear.js' %}"></script>
-<script src="{% static 'js/validate.js' %}"></script>
 <script src="{% static 'js/script.js' %}"></script>
-
 
 <!--Color Switcher-->
 <script src="{% static 'js/color-settings.js' %}"></script>

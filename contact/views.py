@@ -108,3 +108,24 @@ def Investor_Grievances_Cell(request):
 
 def ipo(request):
     return render(request, 'ipo.html')
+
+def ev(request):
+    return render(request, 'ev.html')
+
+def mechanical_engineering(request):
+    return render(request, 'mechanical-engineering.html')
+
+def agricultural_processing(request):
+    return render(request, 'agricultural-processing.html')
+
+def petrolium(request):
+    return render(request, 'petrolium.html')
+
+def material_engineering(request):
+    return render(request, 'material-engineering.html')
+
+def coachingforemployment(request):
+    return render(request,'coachingforemployment.html')
+
+def cybersecurity(request):
+    return render(request, 'cybersecurity.html')
